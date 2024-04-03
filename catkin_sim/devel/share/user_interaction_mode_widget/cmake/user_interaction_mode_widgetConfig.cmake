@@ -1,0 +1,1 @@
+/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/user_interaction_mode_widget/share/user_interaction_mode_widget/cmake/user_interaction_mode_widgetConfig.cmake

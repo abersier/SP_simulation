@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/install
+
+Name: anymal_rsl_recording
+Description: Description of anymal_rsl_recording
+Version: 0.1.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs

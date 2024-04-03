@@ -1,0 +1,10 @@
+[100%] Built target onnx_eigen
+[36mInstall the project...[0m
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/libonnx_eigen.a
+-- Up-to-date: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/include
+-- Installing: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/include/onnx_eigen
+-- Installing: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/include/onnx_eigen/OnnxEigenRNN.hpp
+-- Installing: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/include/onnx_eigen/OnnxEigen.hpp
+-- Installing: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/cmake/onnx_eigen/onnx_eigen-config.cmake
+-- Installing: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/cmake/onnx_eigen/onnx_eigen-config-relwithdebinfo.cmake

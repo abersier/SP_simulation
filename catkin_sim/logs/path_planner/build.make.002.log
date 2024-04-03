@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target path_hardcoder[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/path_hardcoder.dir/src/path_hardcoder.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_planner/lib/path_planner/path_hardcoder[0m
+[100%] Built target path_hardcoder

@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/user_command_relay
+
+Name: user_command_relay
+Description: Description of user_command_relay
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

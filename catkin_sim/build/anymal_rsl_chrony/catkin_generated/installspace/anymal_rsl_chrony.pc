@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/install
+
+Name: anymal_rsl_chrony
+Description: Description of anymal_rsl_chrony
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

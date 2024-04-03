@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<package format="2">
+    <name>anymal_perceptive_ctrl_deep_learning</name>
+    <version>0.0.2</version>
+    <description>The anymal_perceptive_ctrl_deep_learning package</description>
+    <maintainer email="jemin.hwangbo@gmail.com">J. Hwangbo</maintainer>
+    <license>Proprietary</license>
+    <author email="jemin.hwangbo@gmail.com">J. Hwangbo</author>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <exec_depend>catkin</exec_depend>
+
+    <depend>anymal_motion_control</depend>
+    <depend>robot_control</depend>
+    <depend>pluginlib</depend>
+    <depend>quadruped_model</depend>
+    <depend>signal_logger</depend>
+    <depend>loco</depend>
+    <depend>loco_anymal</depend>
+    <depend>message_logger</depend>
+    <depend>quadruped_description</depend>
+    <depend>tf</depend>
+    <depend>tf_conversions</depend>
+    <depend>grid_map_core</depend>
+    <depend>grid_map_ros</depend>
+    <depend>grid_map_msgs</depend> 
+    <depend>unzip</depend> 
+    <depend>onnx_eigen_catkin</depend> 
+
+    <export>
+      <robot_control plugin="${prefix}/robot_control_plugin.xml" />
+    </export>
+</package>
+
+

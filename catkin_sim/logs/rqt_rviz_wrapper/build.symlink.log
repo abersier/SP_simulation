@@ -1,0 +1,5 @@
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/librqt_rviz_wrapper.so
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/pkgconfig/rqt_rviz_wrapper.pc
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/rqt_rviz_wrapper/cmake/rqt_rviz_wrapperConfig-version.cmake
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/rqt_rviz_wrapper/cmake/rqt_rviz_wrapperConfig.cmake
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/include/rqt_rviz_wrapper/ui_RvizWrapper.h

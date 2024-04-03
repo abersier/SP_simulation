@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>onnx_eigen_catkin</name>
+
+  <version>0.0.1</version>
+
+  <description>Catkin wrapper for onnx_eigen</description>
+
+  <maintainer email="tamiki@leggedrobotics.com">Takahiro Miki</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>onnx_eigen</depend>
+
+</package>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>onnx_eigen</name>
+
+  <version>0.0.1</version>
+
+  <description> Deploying onnx model with eigen interface </description>
+
+  <maintainer email="pascale@leggedrobotics.com">Pascal Egli</maintainer>
+  <maintainer email="tamiki@leggedrobotics.com">Takahiro Miki</maintainer>
+
+  <license>TODO</license>
+
+  <!-- The *_depend tags are used to specify dependencies -->
+  <buildtool_depend>cmake</buildtool_depend>
+
+  <export>
+    <!-- Specify that this is not really a ROS package-->
+    <build_type>cmake</build_type>
+  </export>
+
+</package>
+

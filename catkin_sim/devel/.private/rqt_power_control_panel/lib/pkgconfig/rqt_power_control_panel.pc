@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_power_control_panel
+
+Name: rqt_power_control_panel
+Description: Description of rqt_power_control_panel
+Version: 0.0.0
+Cflags: -I/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/power_control_panel/rqt_power_control_panel/include -I/usr/include/x86_64-linux-gnu/qt5/ -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/lib/x86_64-linux-gnu/qt5//mkspecs/linux-g++
+Libs: -L${prefix}/lib -lrqt_power_control_panel /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
+Requires: power_control_panel_widget roscpp rqt_gui rqt_gui_cpp std_msgs

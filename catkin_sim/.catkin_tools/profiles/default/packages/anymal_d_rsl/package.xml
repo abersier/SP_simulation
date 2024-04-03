@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>anymal_d_rsl</name>
+  <version>1.0.0</version>
+  <description>RSL's ANYmal D robot configuration package.</description>
+  <license>Proprietary</license>
+  <maintainer email="parm@ethz.ch">Philip Arm</maintainer>
+  <author email="parm@ethz.ch">Philip Arm</author>
+  <author email="preisigj@ethz.com">Jan Preisig</author>
+  <author email="rudinn@ethz.com">Nikita Rudin</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>anymal_d</exec_depend>
+  <exec_depend>anymal_rsl_chrony</exec_depend>
+  <exec_depend>anymal_rsl_recording</exec_depend>
+
+</package>

@@ -1,0 +1,12 @@
+[35m[1mScanning dependencies of target path_hardcoder[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/path_hardcoder.dir/src/path_hardcoder.cpp.o[0m
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:72:12:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble radius[m[K’
+   72 |     double [01;31m[Kradius[m[K = 1.0;
+      |            [01;31m[K^~~~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:66:12:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble radius[m[K’ previously declared here
+   66 |     double [01;36m[Kradius[m[K = 1.0;
+      |            [01;36m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/path_hardcoder.dir/build.make:63: CMakeFiles/path_hardcoder.dir/src/path_hardcoder.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:660: CMakeFiles/path_hardcoder.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

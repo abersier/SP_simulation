@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/user_interaction_mode_widget
+
+Name: user_interaction_mode_widget
+Description: Description of user_interaction_mode_widget
+Version: 1.2.0
+Cflags: -I/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/user_interaction_mode_panel/user_interaction_mode_widget/include -I/usr/include/x86_64-linux-gnu/qt5/ -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/lib/x86_64-linux-gnu/qt5//mkspecs/linux-g++
+Libs: -L${prefix}/lib -luser_interaction_mode_widget /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
+Requires: param_io roscpp user_interaction_mode_msgs

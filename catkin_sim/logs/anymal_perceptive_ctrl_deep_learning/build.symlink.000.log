@@ -1,0 +1,5 @@
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/libanymal_perceptive_ctrl_deep_learning.so
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/libanymal_perceptive_ctrl_deep_learning_plugin.so
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/pkgconfig/anymal_perceptive_ctrl_deep_learning.pc
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/anymal_perceptive_ctrl_deep_learning/cmake/anymal_perceptive_ctrl_deep_learningConfig.cmake
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/anymal_perceptive_ctrl_deep_learning/cmake/anymal_perceptive_ctrl_deep_learningConfig-version.cmake

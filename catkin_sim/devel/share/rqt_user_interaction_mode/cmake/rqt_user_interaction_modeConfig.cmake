@@ -1,0 +1,1 @@
+/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_user_interaction_mode/share/rqt_user_interaction_mode/cmake/rqt_user_interaction_modeConfig.cmake

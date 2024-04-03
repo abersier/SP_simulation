@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<package format="2">
+
+  <name>anymal_rsl_chrony</name>
+  <version>0.1.0</version>
+  <description>Reset Chrony package for the ANYmal RSL Robots.</description>
+
+  <license>Proprietary</license>
+
+  <author email="waibelg@ethz.ch.com">Gabriel Waibel</author>
+  <maintainer email="waibelg@ethz.ch.com">Gabriel Waibel</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

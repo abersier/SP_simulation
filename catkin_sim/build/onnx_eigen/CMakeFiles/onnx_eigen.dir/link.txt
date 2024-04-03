@@ -1,0 +1,2 @@
+/usr/bin/ar qc libonnx_eigen.a  CMakeFiles/onnx_eigen.dir/src/OnnxEigen.cpp.o CMakeFiles/onnx_eigen.dir/src/OnnxEigenRNN.cpp.o
+/usr/bin/ranlib libonnx_eigen.a

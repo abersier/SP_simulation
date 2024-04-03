@@ -1,0 +1,1 @@
+/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_follower/share/path_follower/cmake/path_followerConfig.cmake

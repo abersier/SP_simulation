@@ -1,0 +1,1 @@
+/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/power_control_panel_widget/share/power_control_panel_widget/cmake/power_control_panel_widgetConfig-version.cmake

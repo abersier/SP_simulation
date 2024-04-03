@@ -1,0 +1,6 @@
+devel_space: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel
+install: false
+install_space: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/install
+profile: default
+source_space: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src
+workspace: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim

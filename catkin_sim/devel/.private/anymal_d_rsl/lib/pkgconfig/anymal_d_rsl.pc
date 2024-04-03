@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/anymal_d_rsl
+
+Name: anymal_d_rsl
+Description: Description of anymal_d_rsl
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

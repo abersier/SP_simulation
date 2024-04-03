@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/environment_examples
+
+Name: environment_examples
+Description: Description of environment_examples
+Version: 0.2.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

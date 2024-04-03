@@ -1,0 +1,23 @@
+<?xml version="2.0"?>
+<package format="2">
+  <name>rqt_power_control_panel</name>
+  <version>0.0.0</version>
+  <description>The rqt_power_control_panel package</description>
+
+  <author email="waibelg@ethz.ch">Gabriel Waibel</author>
+  <maintainer email="waibelg@ethz.ch">Gabriel Waibel</maintainer>
+
+  <license>Proprietary</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>power_control_panel_widget</depend>
+  <depend>roscpp</depend>
+  <depend>rqt_gui</depend>
+  <depend>rqt_gui_cpp</depend>
+  <depend>std_msgs</depend>
+
+  <export>
+    <rqt_gui plugin="${prefix}/plugin.xml"/>
+  </export>
+</package>

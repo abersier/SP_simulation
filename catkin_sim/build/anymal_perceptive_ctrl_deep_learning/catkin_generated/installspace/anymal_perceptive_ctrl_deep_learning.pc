@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/install
+
+Name: anymal_perceptive_ctrl_deep_learning
+Description: Description of anymal_perceptive_ctrl_deep_learning
+Version: 0.0.2
+Cflags: -I${prefix}/include -I/opt/ros/noetic/include -I/opt/openrobots/lib/pkgconfig/../../include -I/usr/include/eigen3
+Libs: -L${prefix}/lib -lanymal_perceptive_ctrl_deep_learning -lpinocchio -lboost_filesystem -lboost_serialization -lboost_system -lurdfdom_sensor -lurdfdom_model_state -lurdfdom_model -lurdfdom_world -lconsole_bridge -lhpp-fcl -loctomap -loctomath
+Requires: loco loco_anymal message_logger pluginlib tf tf_conversions grid_map_core grid_map_ros grid_map_msgs

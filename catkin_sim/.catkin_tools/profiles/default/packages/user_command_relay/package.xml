@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<package format="2">
+
+  <name>user_command_relay</name>
+  <version>1.0.0</version>
+  <description>Helper node to relay the user commands to the twist mux. They will be inverted if requested and not published if the incoming command is zero</description>
+
+  <license>Proprietary</license>
+
+  <author email="zsamuel@ethz.ch">Samuel Zimmermann</author>
+  <author email="parm@ethz.ch">Philip Arm</author>
+  <maintainer email="parm@ethz.ch">Philip Arm</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>geometry_msgs</exec_depend>
+
+</package>

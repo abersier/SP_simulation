@@ -1,0 +1,1 @@
+/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_recording_plugin/lib/python3/dist-packages/src/__init__.py

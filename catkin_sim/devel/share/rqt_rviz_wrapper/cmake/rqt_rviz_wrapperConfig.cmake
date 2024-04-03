@@ -1,0 +1,1 @@
+/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_rviz_wrapper/share/rqt_rviz_wrapper/cmake/rqt_rviz_wrapperConfig.cmake

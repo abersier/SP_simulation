@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/install
+
+Name: rqt_joypad
+Description: Description of rqt_joypad
+Version: 0.6.0
+Cflags: 
+Libs: -L${prefix}/lib -lrqt_joypad
+Requires: roscpp rqt_gui rqt_gui_cpp joy_manager_msgs joystick_label

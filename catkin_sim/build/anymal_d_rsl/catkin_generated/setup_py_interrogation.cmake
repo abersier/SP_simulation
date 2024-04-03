@@ -1,0 +1,7 @@
+set(anymal_d_rsl_SETUP_PY_SETUP_MODULE "setuptools")
+set(anymal_d_rsl_SETUP_PY_VERSION "1.0.0")
+set(anymal_d_rsl_SETUP_PY_SCRIPTS "")
+set(anymal_d_rsl_SETUP_PY_PACKAGES "anymal_d_rsl")
+set(anymal_d_rsl_SETUP_PY_PACKAGE_DIRS "src/anymal_d_rsl")
+set(anymal_d_rsl_SETUP_PY_MODULES "")
+set(anymal_d_rsl_SETUP_PY_MODULE_DIRS "")

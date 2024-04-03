@@ -1,0 +1,11 @@
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/pkgconfig/anymal_d_rsl.pc
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/anymal_d_rsl/jetson.py
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/anymal_d_rsl/replay.py
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/anymal_d_rsl/opc.py
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/anymal_d_rsl/lpc.py
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/anymal_d_rsl/cmake.lock
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/anymal_d_rsl/sim.py
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/anymal_d_rsl/npc.py
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/python3/dist-packages/anymal_d_rsl/__init__.py
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/anymal_d_rsl/cmake/anymal_d_rslConfig.cmake
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/anymal_d_rsl/cmake/anymal_d_rslConfig-version.cmake

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>user_interaction_mode_widget</name>
+  <version>1.2.0</version>
+  <description>GUI for the 'user_interaction_mode' tool.</description>
+
+  <author email="waibelg@ethz.ch">Gabriel Waibel</author>
+  <maintainer email="waibelg@ethz.ch">Gabriel Waibel</maintainer>
+
+  <license>Proprietary</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>actionlib</depend>
+  <depend>param_io</depend>
+  <depend>qtbase5-dev</depend>
+  <depend>roscpp</depend>
+  <depend>rqt_gui</depend>
+  <depend>user_interaction_mode_msgs</depend>
+
+  <export>
+    <rviz plugin="${prefix}/plugin.xml"/>
+  </export>
+
+</package>

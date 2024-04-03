@@ -1,0 +1,9 @@
+# CMake generated Testfile for 
+# Source directory: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/rqt_joypad
+# Build directory: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/rqt_joypad
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(_ctest_rqt_joypad_gtest_test_rqt_joypad "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/rqt_joypad/catkin_generated/env_cached.sh" "/usr/bin/python3" "/opt/ros/noetic/share/catkin/cmake/test/run_tests.py" "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/rqt_joypad/test_results/rqt_joypad/gtest-test_rqt_joypad.xml" "--working-dir" "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/rqt_joypad/test" "--return-code" "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_joypad/lib/rqt_joypad/test_rqt_joypad --gtest_output=xml:/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/rqt_joypad/test_results/rqt_joypad/gtest-test_rqt_joypad.xml")
+set_tests_properties(_ctest_rqt_joypad_gtest_test_rqt_joypad PROPERTIES  _BACKTRACE_TRIPLES "/opt/ros/noetic/share/catkin/cmake/test/tests.cmake;160;add_test;/opt/ros/noetic/share/catkin/cmake/test/gtest.cmake;98;catkin_run_tests_target;/opt/ros/noetic/share/catkin/cmake/test/gtest.cmake;37;_catkin_add_google_test;/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/rqt_joypad/CMakeLists.txt;126;catkin_add_gtest;/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/rqt_joypad/CMakeLists.txt;0;")
+subdirs("gtest")

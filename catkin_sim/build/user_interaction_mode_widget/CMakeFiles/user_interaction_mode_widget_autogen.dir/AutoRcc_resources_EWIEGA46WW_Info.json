@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/user_interaction_mode_widget/user_interaction_mode_widget_autogen",
+	"CMAKE_BINARY_DIR" : "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/user_interaction_mode_widget",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/user_interaction_mode_widget",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/user_interaction_mode_panel/user_interaction_mode_widget",
+	"CMAKE_SOURCE_DIR" : "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/user_interaction_mode_panel/user_interaction_mode_widget",
+	"INCLUDE_DIR" : "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/user_interaction_mode_widget/user_interaction_mode_widget_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/user_interaction_mode_panel/user_interaction_mode_widget/resources/stop.png"
+	],
+	"LOCK_FILE" : "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/user_interaction_mode_widget/CMakeFiles/user_interaction_mode_widget_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/user_interaction_mode_widget/CMakeFiles/user_interaction_mode_widget_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/anymal_rsl/anymal_rsl_user_interface/user_interaction_mode_panel/user_interaction_mode_widget/resources.qrc",
+	"VERBOSITY" : 0
+}

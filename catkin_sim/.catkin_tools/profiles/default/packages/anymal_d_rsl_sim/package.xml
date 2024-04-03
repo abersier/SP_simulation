@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>anymal_d_rsl_sim</name>
+  <version>1.0.0</version>
+  <description>RSL's ANYmal D robot Sim package.</description>
+  <license>Proprietary</license>
+
+  <maintainer email="parm@ethz.ch">Philip Arm</maintainer>
+  <author email="preisigj@ethz.ch">Jan Preisig</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- ANYbotics dependencies -->
+  <exec_depend>anymal_d_sim</exec_depend>
+
+  <!-- RSL dependencies -->
+  <exec_depend>anymal_d_rsl</exec_depend>
+  <exec_depend>user_command_relay</exec_depend>
+
+  <!-- Controller dependencies-->
+  <exec_depend>anymal_ctrl_deep_learning</exec_depend>
+  <exec_depend>anymal_perceptive_ctrl_deep_learning</exec_depend>
+  <exec_depend>rl_controller</exec_depend>
+
+  <!-- GUI dependencies -->
+  <exec_depend>rqt_joypad</exec_depend>
+  <exec_depend>rqt_power_control_panel</exec_depend>
+  <exec_depend>rqt_recording_plugin</exec_depend>
+  <exec_depend>rqt_rviz_wrapper</exec_depend>
+  <exec_depend>rqt_user_interaction_mode</exec_depend>
+
+  <export>
+    <metapackage />
+  </export>
+
+</package>
