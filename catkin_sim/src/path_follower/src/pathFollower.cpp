@@ -101,7 +101,7 @@ bool navFwd = true;
 double switchTime = 0;
 bool baseInverted = false;
 
-// Modified, not that this gets over-written anyways
+// Modified, note that this gets over-written anyways
 std::string odomTopic = "/state_estimator/pose_in_odom"; //default: /state_estimation
 // Modified, not that this gets over-written anyways
 std::string commandTopic = "/path_planning_and_following/twist"; //default: /cmd_vel

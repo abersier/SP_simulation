@@ -1,0 +1,19 @@
+<launch>
+    <!-- Start the simulation -->
+    <node name="sim" pkg="anymal_d_rsl" type="sim.py" />
+
+    <!-- Argument to decide whether to use hardcoded sensor data -->
+    <arg name="use_sensor_faker" default="true" />
+
+    <!-- Start the sensor_faker node if use_sensor_faker is true -->
+    <node if="$(arg use_sensor_faker)" name="sensor_faker" pkg="gas_sensing" type="sensor_faker" />
+
+    <!-- Start the node that subscribes to the sensor data topic if use_sensor_faker is false -->
+    <node unless="$(arg use_sensor_faker)" name="sensor_subscriber" pkg="gas_sensing" type="sensor_subscriber" />
+
+    <!-- Start the path_follower_node -->
+    <include file="$(find path_follower)/launch/path_follower.launch" />
+
+    <!-- Start the path_hardcoder node -->
+    <node name="path_hardcoder" pkg="path_planner" type="path_hardcoder" />
+</launch>

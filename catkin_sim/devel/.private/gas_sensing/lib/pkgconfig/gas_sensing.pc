@@ -1,0 +1,8 @@
+prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/gas_sensing
+
+Name: gas_sensing
+Description: Description of gas_sensing
+Version: 0.0.0
+Cflags: -I/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/gas_sensing/include
+Libs: -L${prefix}/lib -lgas_sensing
+Requires: roscpp std_msgs geometry_msgs message_runtime visualization_msgs
