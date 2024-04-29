@@ -13,10 +13,12 @@ find_package(catkin REQUIRED COMPONENTS
     geometry_msgs
     message_generation
     visualization_msgs
+    message_filters
+    esp32_ros
 )
 
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+# find_package(OpenCV REQUIRED)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -108,7 +110,7 @@ generate_messages(
 catkin_package(
  # LIBRARIES gas_sensing
  LIBRARIES ${PROJECT_NAME}
- CATKIN_DEPENDS roscpp std_msgs geometry_msgs message_runtime visualization_msgs
+ CATKIN_DEPENDS roscpp std_msgs geometry_msgs message_runtime visualization_msgs message_filters esp32_ros
  # DEPENDS system_lib
 )
 
@@ -136,6 +138,8 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(sensor_faker src/sensor_faker.cpp)
+add_executable(sensor_subscriber src/sensor_subscriber.cpp)
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -149,6 +153,10 @@ add_executable(sensor_faker src/sensor_faker.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(sensor_faker
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(sensor_subscriber
   ${catkin_LIBRARIES}
 )
 

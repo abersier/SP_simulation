@@ -53,7 +53,10 @@
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>visualization_msgs</depend>
+  <depend>message_filters</depend>
   <build_depend>message_generation</build_depend>
+  <build_depend>esp32_ros</build_depend>
+  <exec_depend>esp32_ros</exec_depend>
   <exec_depend>message_runtime</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->

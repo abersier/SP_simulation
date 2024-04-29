@@ -1,4 +1,7 @@
 <launch>
+    <!-- Use simulation time -->
+    <param name="/use_sim_time" value="true"/>
+    
     <!-- Start the simulation -->
     <node name="sim" pkg="anymal_d_rsl" type="sim.py" />
 
@@ -8,8 +11,12 @@
     <!-- Start the sensor_faker node if use_sensor_faker is true -->
     <node if="$(arg use_sensor_faker)" name="sensor_faker" pkg="gas_sensing" type="sensor_faker" />
 
-    <!-- Start the node that subscribes to the sensor data topic if use_sensor_faker is false -->
-    <node unless="$(arg use_sensor_faker)" name="sensor_subscriber" pkg="gas_sensing" type="sensor_subscriber" />
+    <!-- Start the sensor_listener and serial_node.py if use_sensor_faker is false -->
+    <group unless="$(arg use_sensor_faker)">
+        <node name="sensor_listener" pkg="esp32_ros" type="sensor_listener" />
+        <node name="serial_node" pkg="rosserial_python" type="serial_node.py" args="_port:=/dev/ttyACM0 _baud:=57600" />
+        <node name="sensor_subscriber" pkg="gas_sensing" type="sensor_subscriber" />
+    </group>
 
     <!-- Start the path_follower_node -->
     <include file="$(find path_follower)/launch/path_follower.launch" />

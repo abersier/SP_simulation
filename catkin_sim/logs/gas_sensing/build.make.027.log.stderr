@@ -1,0 +1,8 @@
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_faker.cpp:[m[K In member function ‘[01m[Kvoid SensorFaker::callback(const PoseWithCovarianceStampedConstPtr&)[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_faker.cpp:170:31:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Ksensor_msgs::ImagePtr msg[m[K’ shadows a parameter
+  170 |         sensor_msgs::ImagePtr [01;31m[Kmsg[m[K = cv_bridge::CvImage(std_msgs::Header(), "bgr8", image).toImageMsg();
+      |                               [01;31m[K^~~[m[K
+make[2]: *** [CMakeFiles/sensor_faker.dir/build.make:63: CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1608: CMakeFiles/sensor_faker.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

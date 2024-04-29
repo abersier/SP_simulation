@@ -18,6 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/gas_sensing/include"
+  "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/esp32_ros/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

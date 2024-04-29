@@ -259,6 +259,45 @@ _gas_sensing_generate_messages_check_deps_ConcentrationWithHeader/fast:
 .PHONY : _gas_sensing_generate_messages_check_deps_ConcentrationWithHeader/fast
 
 #=============================================================================
+# Target rules for targets named esp32_ros_generate_messages_nodejs
+
+# Build rule for target.
+esp32_ros_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 esp32_ros_generate_messages_nodejs
+.PHONY : esp32_ros_generate_messages_nodejs
+
+# fast build rule for target.
+esp32_ros_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/esp32_ros_generate_messages_nodejs.dir/build.make CMakeFiles/esp32_ros_generate_messages_nodejs.dir/build
+.PHONY : esp32_ros_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named esp32_ros_generate_messages_lisp
+
+# Build rule for target.
+esp32_ros_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 esp32_ros_generate_messages_lisp
+.PHONY : esp32_ros_generate_messages_lisp
+
+# fast build rule for target.
+esp32_ros_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/esp32_ros_generate_messages_lisp.dir/build.make CMakeFiles/esp32_ros_generate_messages_lisp.dir/build
+.PHONY : esp32_ros_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named esp32_ros_generate_messages_eus
+
+# Build rule for target.
+esp32_ros_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 esp32_ros_generate_messages_eus
+.PHONY : esp32_ros_generate_messages_eus
+
+# fast build rule for target.
+esp32_ros_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/esp32_ros_generate_messages_eus.dir/build.make CMakeFiles/esp32_ros_generate_messages_eus.dir/build
+.PHONY : esp32_ros_generate_messages_eus/fast
+
+#=============================================================================
 # Target rules for targets named gas_sensing_generate_messages_py
 
 # Build rule for target.
@@ -309,6 +348,19 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 rosgraph_msgs_generate_messages_cpp/fast:
 	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named esp32_ros_generate_messages_cpp
+
+# Build rule for target.
+esp32_ros_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 esp32_ros_generate_messages_cpp
+.PHONY : esp32_ros_generate_messages_cpp
+
+# fast build rule for target.
+esp32_ros_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/esp32_ros_generate_messages_cpp.dir/build.make CMakeFiles/esp32_ros_generate_messages_cpp.dir/build
+.PHONY : esp32_ros_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
@@ -387,6 +439,19 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 roscpp_generate_messages_cpp/fast:
 	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_subscriber
+
+# Build rule for target.
+sensor_subscriber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_subscriber
+.PHONY : sensor_subscriber
+
+# fast build rule for target.
+sensor_subscriber/fast:
+	$(MAKE) -f CMakeFiles/sensor_subscriber.dir/build.make CMakeFiles/sensor_subscriber.dir/build
+.PHONY : sensor_subscriber/fast
 
 #=============================================================================
 # Target rules for targets named gas_sensing_generate_messages_cpp
@@ -597,6 +662,19 @@ visualization_msgs_generate_messages_cpp/fast:
 .PHONY : visualization_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named esp32_ros_generate_messages_py
+
+# Build rule for target.
+esp32_ros_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 esp32_ros_generate_messages_py
+.PHONY : esp32_ros_generate_messages_py
+
+# fast build rule for target.
+esp32_ros_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/esp32_ros_generate_messages_py.dir/build.make CMakeFiles/esp32_ros_generate_messages_py.dir/build
+.PHONY : esp32_ros_generate_messages_py/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -805,6 +883,33 @@ src/sensor_faker.cpp.s:
 	$(MAKE) -f CMakeFiles/sensor_faker.dir/build.make CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.s
 .PHONY : src/sensor_faker.cpp.s
 
+src/sensor_subscriber.o: src/sensor_subscriber.cpp.o
+
+.PHONY : src/sensor_subscriber.o
+
+# target to build an object file
+src/sensor_subscriber.cpp.o:
+	$(MAKE) -f CMakeFiles/sensor_subscriber.dir/build.make CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o
+.PHONY : src/sensor_subscriber.cpp.o
+
+src/sensor_subscriber.i: src/sensor_subscriber.cpp.i
+
+.PHONY : src/sensor_subscriber.i
+
+# target to preprocess a source file
+src/sensor_subscriber.cpp.i:
+	$(MAKE) -f CMakeFiles/sensor_subscriber.dir/build.make CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.i
+.PHONY : src/sensor_subscriber.cpp.i
+
+src/sensor_subscriber.s: src/sensor_subscriber.cpp.s
+
+.PHONY : src/sensor_subscriber.s
+
+# target to generate assembly for a file
+src/sensor_subscriber.cpp.s:
+	$(MAKE) -f CMakeFiles/sensor_subscriber.dir/build.make CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.s
+.PHONY : src/sensor_subscriber.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -820,6 +925,9 @@ help:
 	@echo "... gas_sensing_genlisp"
 	@echo "... gas_sensing_generate_messages_lisp"
 	@echo "... _gas_sensing_generate_messages_check_deps_ConcentrationWithHeader"
+	@echo "... esp32_ros_generate_messages_nodejs"
+	@echo "... esp32_ros_generate_messages_lisp"
+	@echo "... esp32_ros_generate_messages_eus"
 	@echo "... install"
 	@echo "... gas_sensing_generate_messages_py"
 	@echo "... visualization_msgs_generate_messages_py"
@@ -827,6 +935,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... test"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... esp32_ros_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
@@ -834,6 +943,7 @@ help:
 	@echo "... gas_sensing_generate_messages"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
+	@echo "... sensor_subscriber"
 	@echo "... gas_sensing_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_py"
@@ -850,6 +960,7 @@ help:
 	@echo "... gas_sensing_geneus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... esp32_ros_generate_messages_py"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
@@ -868,6 +979,9 @@ help:
 	@echo "... src/sensor_faker.o"
 	@echo "... src/sensor_faker.i"
 	@echo "... src/sensor_faker.s"
+	@echo "... src/sensor_subscriber.o"
+	@echo "... src/sensor_subscriber.i"
+	@echo "... src/sensor_subscriber.s"
 .PHONY : help
 
 
