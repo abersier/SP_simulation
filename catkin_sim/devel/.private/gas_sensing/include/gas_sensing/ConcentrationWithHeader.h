@@ -16,7 +16,7 @@
 #include <ros/message_operations.h>
 
 #include <std_msgs/Header.h>
-#include <geometry_msgs/Pose.h>
+#include <geometry_msgs/PoseStamped.h>
 
 namespace gas_sensing
 {
@@ -45,7 +45,7 @@ struct ConcentrationWithHeader_
    typedef float _concentration_type;
   _concentration_type concentration;
 
-   typedef  ::geometry_msgs::Pose_<ContainerAllocator>  _pose_type;
+   typedef  ::geometry_msgs::PoseStamped_<ContainerAllocator>  _pose_type;
   _pose_type pose;
 
 
@@ -136,12 +136,12 @@ struct MD5Sum< ::gas_sensing::ConcentrationWithHeader_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "2da1435b54a9d90dbfea04b09044643e";
+    return "1afbe5b0dba4403221876028b40c67fa";
   }
 
   static const char* value(const ::gas_sensing::ConcentrationWithHeader_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x2da1435b54a9d90dULL;
-  static const uint64_t static_value2 = 0xbfea04b09044643eULL;
+  static const uint64_t static_value1 = 0x1afbe5b0dba44032ULL;
+  static const uint64_t static_value2 = 0x21876028b40c67faULL;
 };
 
 template<class ContainerAllocator>
@@ -163,7 +163,7 @@ struct Definition< ::gas_sensing::ConcentrationWithHeader_<ContainerAllocator> >
     return "# ConcentrationWithHeader.msg\n"
 "std_msgs/Header header\n"
 "float32 concentration\n"
-"geometry_msgs/Pose pose\n"
+"geometry_msgs/PoseStamped pose\n"
 "\n"
 "================================================================================\n"
 "MSG: std_msgs/Header\n"
@@ -180,6 +180,12 @@ struct Definition< ::gas_sensing::ConcentrationWithHeader_<ContainerAllocator> >
 "time stamp\n"
 "#Frame this data is associated with\n"
 "string frame_id\n"
+"\n"
+"================================================================================\n"
+"MSG: geometry_msgs/PoseStamped\n"
+"# A Pose with reference coordinate frame and timestamp\n"
+"Header header\n"
+"Pose pose\n"
 "\n"
 "================================================================================\n"
 "MSG: geometry_msgs/Pose\n"
@@ -248,7 +254,7 @@ struct Printer< ::gas_sensing::ConcentrationWithHeader_<ContainerAllocator> >
     Printer<float>::stream(s, indent + "  ", v.concentration);
     s << indent << "pose: ";
     s << std::endl;
-    Printer< ::geometry_msgs::Pose_<ContainerAllocator> >::stream(s, indent + "  ", v.pose);
+    Printer< ::geometry_msgs::PoseStamped_<ContainerAllocator> >::stream(s, indent + "  ", v.pose);
   }
 };
 

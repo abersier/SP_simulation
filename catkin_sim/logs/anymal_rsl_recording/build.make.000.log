@@ -1,52 +1,52 @@
-[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
 [35m[1mScanning dependencies of target _anymal_rsl_recording_generate_messages_check_deps_StopRecordingInternal[0m
-[35m[1mScanning dependencies of target _anymal_rsl_recording_generate_messages_check_deps_StartRecordingInternal[0m
-[35m[1mScanning dependencies of target _anymal_rsl_recording_generate_messages_check_deps_StopRecording[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
 [35m[1mScanning dependencies of target _anymal_rsl_recording_generate_messages_check_deps_StartRecording[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
-[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _anymal_rsl_recording_generate_messages_check_deps_StopRecordingInternal
+[  0%] Built target _anymal_rsl_recording_generate_messages_check_deps_StartRecording
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
 [  0%] Built target std_msgs_generate_messages_py
-[  0%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target _anymal_rsl_recording_generate_messages_check_deps_StartRecordingInternal[0m
+[  0%] Built target _anymal_rsl_recording_generate_messages_check_deps_StartRecordingInternal
+[35m[1mScanning dependencies of target _anymal_rsl_recording_generate_messages_check_deps_StopRecording[0m
+[  0%] Built target _anymal_rsl_recording_generate_messages_check_deps_StopRecording
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
 [  0%] Built target std_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  0%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[  0%] Built target std_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
 [  0%] Built target std_msgs_generate_messages_lisp
-[  0%] Built target _anymal_rsl_recording_generate_messages_check_deps_StopRecordingInternal
-[  0%] Built target _anymal_rsl_recording_generate_messages_check_deps_StartRecordingInternal
-[  0%] Built target _anymal_rsl_recording_generate_messages_check_deps_StartRecording
-[  0%] Built target _anymal_rsl_recording_generate_messages_check_deps_StopRecording
-[35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages_lisp[0m
 [35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages_py[0m
-[35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages_nodejs[0m
-[35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages_cpp[0m
-[35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages_eus[0m
 [  4%] [34m[1mGenerating Python code from SRV anymal_rsl_recording/StartRecording[0m
 [  9%] [34m[1mGenerating Python code from SRV anymal_rsl_recording/StartRecordingInternal[0m
 [ 13%] [34m[1mGenerating Python code from SRV anymal_rsl_recording/StopRecording[0m
-[ 18%] [34m[1mGenerating Lisp code from anymal_rsl_recording/StartRecordingInternal.srv[0m
-[ 22%] [34m[1mGenerating Lisp code from anymal_rsl_recording/StartRecording.srv[0m
-[ 31%] [34m[1mGenerating C++ code from anymal_rsl_recording/StartRecording.srv[0m
-[ 31%] [34m[1mGenerating Javascript code from anymal_rsl_recording/StartRecording.srv[0m
-[ 36%] [34m[1mGenerating EusLisp code from anymal_rsl_recording/StartRecording.srv[0m
-[ 40%] [34m[1mGenerating C++ code from anymal_rsl_recording/StartRecordingInternal.srv[0m
-[ 45%] [34m[1mGenerating Javascript code from anymal_rsl_recording/StartRecordingInternal.srv[0m
-[ 50%] [34m[1mGenerating Lisp code from anymal_rsl_recording/StopRecording.srv[0m
-[ 54%] [34m[1mGenerating Lisp code from anymal_rsl_recording/StopRecordingInternal.srv[0m
-[ 59%] [34m[1mGenerating EusLisp code from anymal_rsl_recording/StartRecordingInternal.srv[0m
-[ 63%] [34m[1mGenerating Javascript code from anymal_rsl_recording/StopRecording.srv[0m
-[ 63%] Built target anymal_rsl_recording_generate_messages_lisp
-[ 72%] [34m[1mGenerating EusLisp code from anymal_rsl_recording/StopRecording.srv[0m
-[ 72%] [34m[1mGenerating Javascript code from anymal_rsl_recording/StopRecordingInternal.srv[0m
-[ 77%] [34m[1mGenerating C++ code from anymal_rsl_recording/StopRecording.srv[0m
-[ 77%] Built target anymal_rsl_recording_generate_messages_nodejs
-[ 81%] [34m[1mGenerating C++ code from anymal_rsl_recording/StopRecordingInternal.srv[0m
-[ 86%] [34m[1mGenerating EusLisp code from anymal_rsl_recording/StopRecordingInternal.srv[0m
-[ 90%] [34m[1mGenerating Python code from SRV anymal_rsl_recording/StopRecordingInternal[0m
-[ 95%] [34m[1mGenerating EusLisp manifest code for anymal_rsl_recording[0m
-[100%] [34m[1mGenerating Python srv __init__.py for anymal_rsl_recording[0m
-[100%] Built target anymal_rsl_recording_generate_messages_cpp
-[100%] Built target anymal_rsl_recording_generate_messages_py
-[100%] Built target anymal_rsl_recording_generate_messages_eus
+[ 18%] [34m[1mGenerating Python code from SRV anymal_rsl_recording/StopRecordingInternal[0m
+[ 22%] [34m[1mGenerating Python srv __init__.py for anymal_rsl_recording[0m
+[35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages_nodejs[0m
+[ 27%] [34m[1mGenerating Javascript code from anymal_rsl_recording/StartRecording.srv[0m
+[ 31%] [34m[1mGenerating Javascript code from anymal_rsl_recording/StartRecordingInternal.srv[0m
+[ 31%] Built target anymal_rsl_recording_generate_messages_py
+[35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages_cpp[0m
+[ 36%] [34m[1mGenerating C++ code from anymal_rsl_recording/StartRecording.srv[0m
+[ 40%] [34m[1mGenerating Javascript code from anymal_rsl_recording/StopRecording.srv[0m
+[ 45%] [34m[1mGenerating Javascript code from anymal_rsl_recording/StopRecordingInternal.srv[0m
+[ 45%] Built target anymal_rsl_recording_generate_messages_nodejs
+[ 50%] [34m[1mGenerating C++ code from anymal_rsl_recording/StartRecordingInternal.srv[0m
+[35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages_eus[0m
+[ 54%] [34m[1mGenerating EusLisp code from anymal_rsl_recording/StartRecording.srv[0m
+[ 59%] [34m[1mGenerating C++ code from anymal_rsl_recording/StopRecording.srv[0m
+[ 63%] [34m[1mGenerating EusLisp code from anymal_rsl_recording/StartRecordingInternal.srv[0m
+[ 68%] [34m[1mGenerating EusLisp code from anymal_rsl_recording/StopRecording.srv[0m
+[ 72%] [34m[1mGenerating EusLisp code from anymal_rsl_recording/StopRecordingInternal.srv[0m
+[ 77%] [34m[1mGenerating C++ code from anymal_rsl_recording/StopRecordingInternal.srv[0m
+[ 81%] [34m[1mGenerating EusLisp manifest code for anymal_rsl_recording[0m
+[ 81%] Built target anymal_rsl_recording_generate_messages_cpp
+[ 81%] Built target anymal_rsl_recording_generate_messages_eus
+[35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages_lisp[0m
+[ 86%] [34m[1mGenerating Lisp code from anymal_rsl_recording/StartRecording.srv[0m
+[ 90%] [34m[1mGenerating Lisp code from anymal_rsl_recording/StartRecordingInternal.srv[0m
+[ 95%] [34m[1mGenerating Lisp code from anymal_rsl_recording/StopRecording.srv[0m
+[100%] [34m[1mGenerating Lisp code from anymal_rsl_recording/StopRecordingInternal.srv[0m
+[100%] Built target anymal_rsl_recording_generate_messages_lisp
 [35m[1mScanning dependencies of target anymal_rsl_recording_generate_messages[0m
 [100%] Built target anymal_rsl_recording_generate_messages

@@ -1,3 +1,18 @@
+[35m[1mScanning dependencies of target rqt_rviz_wrapper-clang_format-trigger[0m
+[ 11%] [34m[1mGenerating clang_format/rqt_rviz_wrapper-clang_format-trigger.stamp[0m
 [ 11%] Built target rqt_rviz_wrapper-clang_format-trigger
+[35m[1mScanning dependencies of target rqt_rviz_wrapper_clang-format[0m
+[ 22%] [34m[1mGenerating clang_format/l_rsl-anymal_rsl_user_interface-graphical_user_interface-rqt-rqt_rviz_wrapper-src-rqt_rviz_wrapper-RvizWrapper.cpp-clang_format.proxy[0m
+Run clang-format for RvizWrapper.cpp
+[ 33%] [34m[1mGenerating clang_format/kin_sim-src-anymal_rsl-anymal_rsl_user_interface-graphical_user_interface-rqt-rqt_rviz_wrapper-test-EmptyTests.cpp-clang_format.proxy[0m
+Run clang-format for EmptyTests.cpp
+[ 44%] [34m[1mGenerating clang_format/rsl-anymal_rsl_user_interface-graphical_user_interface-rqt-rqt_rviz_wrapper-include-rqt_rviz_wrapper-RvizWrapper.h-clang_format.proxy[0m
+Run clang-format for RvizWrapper.h
 [ 44%] Built target rqt_rviz_wrapper_clang-format
+[ 55%] [34m[1mGenerating /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_rviz_wrapper/include/rqt_rviz_wrapper/ui_RvizWrapper.h[0m
+[ 66%] [34m[1mGenerating include/rqt_rviz_wrapper/moc_RvizWrapper.cpp[0m
+[35m[1mScanning dependencies of target rqt_rviz_wrapper[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/rqt_rviz_wrapper.dir/src/rqt_rviz_wrapper/RvizWrapper.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/rqt_rviz_wrapper.dir/include/rqt_rviz_wrapper/moc_RvizWrapper.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_rviz_wrapper/lib/librqt_rviz_wrapper.so[0m
 [100%] Built target rqt_rviz_wrapper

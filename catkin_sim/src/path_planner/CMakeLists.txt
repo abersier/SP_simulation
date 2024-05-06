@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0.2)
 project(path_planner)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11)
+# add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -11,13 +11,11 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   geometry_msgs
+  message_generation
   nav_msgs
-  tf
-  tf2
-  tf2_ros
-  tf2_geometry_msgs
   visualization_msgs
   dynamic_reconfigure
+  # gas_sensing
 )
 
 ## System dependencies are found with CMake's conventions
@@ -54,11 +52,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  ConcentrationWithHeader.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -75,10 +72,11 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+  geometry_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -110,9 +108,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+# INCLUDE_DIRS include
 #  LIBRARIES path_planner
-CATKIN_DEPENDS roscpp std_msgs geometry_msgs nav_msgs tf tf2 tf2_ros tf2_geometry_msgs visualization_msgs dynamic_reconfigure
+LIBRARIES ${PROJECT_NAME}
+CATKIN_DEPENDS roscpp std_msgs geometry_msgs message_runtime nav_msgs visualization_msgs dynamic_reconfigure 
 #  DEPENDS system_lib
 )
 
@@ -123,7 +122,6 @@ CATKIN_DEPENDS roscpp std_msgs geometry_msgs nav_msgs tf tf2 tf2_ros tf2_geometr
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
 ${catkin_INCLUDE_DIRS}
 )
 
@@ -141,6 +139,7 @@ ${catkin_INCLUDE_DIRS}
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(path_hardcoder src/path_hardcoder.cpp)
+add_executable(path_planner src/path_planner.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -151,9 +150,14 @@ add_executable(path_hardcoder src/path_hardcoder.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(path_planner ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(path_hardcoder
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(path_planner
   ${catkin_LIBRARIES}
 )
 

@@ -1,5 +1,5 @@
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_joypad/lib/librqt_joypad.so, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/librqt_joypad.so)
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_joypad/lib/pkgconfig/rqt_joypad.pc, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/pkgconfig/rqt_joypad.pc)
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_joypad/lib/python3/dist-packages/rqt_joypad/__init__.py, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/python3/dist-packages/rqt_joypad/__init__.py)
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_joypad/share/rqt_joypad/cmake/rqt_joypadConfig.cmake, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/rqt_joypad/cmake/rqt_joypadConfig.cmake)
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/rqt_joypad/share/rqt_joypad/cmake/rqt_joypadConfig-version.cmake, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/rqt_joypad/cmake/rqt_joypadConfig-version.cmake)
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/librqt_joypad.so
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/pkgconfig/rqt_joypad.pc
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/python3/dist-packages/rqt_joypad/__init__.py
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/rqt_joypad/cmake/rqt_joypadConfig.cmake
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/rqt_joypad/cmake/rqt_joypadConfig-version.cmake

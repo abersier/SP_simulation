@@ -1,0 +1,9 @@
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:84:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_goal[m[K’ does not name a type
+   84 |     [01;31m[Kprevious_goal[m[K.pose.position.x = start_x;
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:85:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kprevious_goal[m[K’ does not name a type
+   85 |     [01;31m[Kprevious_goal[m[K.pose.position.y = start_y;
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/path_planner.dir/build.make:63: CMakeFiles/path_planner.dir/src/path_planner.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:196: CMakeFiles/path_planner.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

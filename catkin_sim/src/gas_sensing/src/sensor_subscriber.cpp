@@ -10,13 +10,31 @@
 #include <message_filters/time_synchronizer.h>
 #include <message_filters/sync_policies/approximate_time.h>
 
+// TODO: In this node, the handling of the normalization is wrong.
+// when following the gradient, in theory, the normalized_concentration will be 1 (because maximal) all the time
+
 
 typedef message_filters::sync_policies::ApproximateTime<geometry_msgs::PoseWithCovarianceStamped, esp32_ros::FloatWithHeader> MySyncPolicy;
 
+void concentration_to_color(float normalized_concentration, float& r, float& g, float& b) {
+
+    if (normalized_concentration < 0.5) {
+        // Gradient from blue to green
+        b = 1.0 - 2 * normalized_concentration;
+        g = 2 * normalized_concentration;
+        r = 0.0;
+    } else {
+        // Gradient from green to red
+        g = 2.0 - 2 * normalized_concentration;
+        r = 2 * normalized_concentration - 1.0;
+        b = 0.0;
+    }
+}
 
 class SensorSubscriber
 {
 public:
+    // HERE, TAKE CARE OF THE max_concentration. THIS IS RELVANT FOR THE NORMALIZATION
     SensorSubscriber()
         : max_concentration(1.0)
     {
@@ -30,6 +48,10 @@ public:
         marker_pub = nh.advertise<visualization_msgs::Marker>("concentration_marker", 1);
     }
 private:
+
+    int marker_id = 0; // Add this line to keep track of marker IDs
+    int counter = 0;
+
     float max_concentration;
     void syncCallback(const geometry_msgs::PoseWithCovarianceStampedConstPtr& pose, const esp32_ros::FloatWithHeaderConstPtr& concentration)
     {
@@ -60,9 +82,11 @@ private:
             gas_sensing::ConcentrationWithHeader transmitted_gas_concentration;
 
             // Prepare the message to be sent
-            transmitted_gas_concentration.pose.position.x = x;
-            transmitted_gas_concentration.pose.position.y = y;
-            transmitted_gas_concentration.pose.position.z = z;
+            transmitted_gas_concentration.pose.pose.position.x = x;
+            transmitted_gas_concentration.pose.pose.position.y = y;
+            transmitted_gas_concentration.pose.pose.position.z = z;
+            transmitted_gas_concentration.pose.header.stamp = lastPose->header.stamp;
+            transmitted_gas_concentration.pose.header.frame_id = "odom";
             
             // Note: this topic will only send the latest concentration, not the history of concentrations. Storing concentrations will be done by the planning node.
             transmitted_gas_concentration.concentration = concentration;
@@ -75,12 +99,14 @@ private:
                 max_concentration = concentration;
             }
             float normalized_concentration = concentration/max_concentration;
+            float r, g, b;
+            concentration_to_color(normalized_concentration, r, g, b);
 
             visualization_msgs::Marker marker;
             marker.header.frame_id = "odom";
             marker.header.stamp = lastPose->header.stamp;
             marker.ns = "gas_concentration";
-            marker.id = 0;
+            marker.id = marker_id;
             marker.type = visualization_msgs::Marker::SPHERE;
             marker.action = visualization_msgs::Marker::ADD;
             marker.pose.position.x = x;
@@ -94,12 +120,23 @@ private:
             marker.scale.y = normalized_concentration;
             marker.scale.z = normalized_concentration;
             marker.color.a = 1.0;
-            marker.color.r = std::min(normalized_concentration, 1.0f);
-            marker.color.g = 0.0;
-            marker.color.b = 0.0;
+            marker.color.r = r;
+            marker.color.g = g;
+            marker.color.b = b;
 
             pub.publish(transmitted_gas_concentration);
             marker_pub.publish(marker);
+
+            if (counter % 100 == 0) {
+                marker_pub.publish(marker);
+                marker_id++;
+            }
+            counter++;
+
+            if (counter == 1000) {
+                counter = 0;
+                marker_id = 0;
+            }
         }
         
     }

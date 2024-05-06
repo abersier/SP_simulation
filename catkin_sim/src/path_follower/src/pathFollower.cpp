@@ -287,6 +287,11 @@ int main(int argc, char** argv)
     ros::spinOnce();
 
     if (pathInit) {
+      // HERE, ADDED COMMENTARS FOR DEBUGGUNG
+      ROS_INFO("Path initialized: ");
+      for(int i = 0; i < path.poses.size(); i++) {
+        ROS_INFO("Pose %d: x: %f, y: %f", i, path.poses[i].pose.position.x, path.poses[i].pose.position.y);
+      }
       float vehicleXRel = cos(vehicleYawRec) * (vehicleX - vehicleXRec)
                         + sin(vehicleYawRec) * (vehicleY - vehicleYRec);
       float vehicleYRel = -sin(vehicleYawRec) * (vehicleX - vehicleXRec)

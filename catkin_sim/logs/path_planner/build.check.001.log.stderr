@@ -1,0 +1,11 @@
+[31m[1mCMake Error[0m at /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/gas_sensing/cmake/gas_sensingConfig.cmake:173 (message):
+  Project 'path_planner' tried to find library 'gas_sensing'.  The library is
+  neither a target nor built/installed properly.  Did you compile project
+  'gas_sensing'? Did you find_package() it before the subdirectory containing
+  its code is included?
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/noetic/share/catkin/cmake/catkinConfig.cmake:76 (find_package)
+  CMakeLists.txt:10 (find_package)
+
+
+make: *** [Makefile:1150: cmake_check_build_system] Error 1

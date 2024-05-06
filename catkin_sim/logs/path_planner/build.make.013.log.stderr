@@ -1,0 +1,8 @@
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:[m[K In function ‘[01m[Kdouble computeDistance(const PoseStamped&, const PoseStamped&)[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:23:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kdz[m[K’ was not declared in this scope; did you mean ‘[01m[Kdy[m[K’?
+   23 |     return std::sqrt(dx * dx + dy * dy + [01;31m[Kdz[m[K * dz);
+      |                                          [01;31m[K^~[m[K
+      |                                          [32m[Kdy[m[K
+make[2]: *** [CMakeFiles/path_planner.dir/build.make:63: CMakeFiles/path_planner.dir/src/path_planner.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:196: CMakeFiles/path_planner.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,3 +1,3 @@
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/anymal_rsl_chrony/lib/pkgconfig/anymal_rsl_chrony.pc, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/pkgconfig/anymal_rsl_chrony.pc)
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/anymal_rsl_chrony/share/anymal_rsl_chrony/cmake/anymal_rsl_chronyConfig-version.cmake, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/anymal_rsl_chrony/cmake/anymal_rsl_chronyConfig-version.cmake)
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/anymal_rsl_chrony/share/anymal_rsl_chrony/cmake/anymal_rsl_chronyConfig.cmake, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/anymal_rsl_chrony/cmake/anymal_rsl_chronyConfig.cmake)
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/pkgconfig/anymal_rsl_chrony.pc
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/anymal_rsl_chrony/cmake/anymal_rsl_chronyConfig-version.cmake
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/anymal_rsl_chrony/cmake/anymal_rsl_chronyConfig.cmake

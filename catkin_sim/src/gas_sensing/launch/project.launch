@@ -8,6 +8,9 @@
     <!-- Argument to decide whether to use hardcoded sensor data -->
     <arg name="use_sensor_faker" default="true" />
 
+    <!-- Start the path_follower_node -->
+    <include file="$(find path_follower)/launch/path_follower.launch" />
+
     <!-- Start the sensor_faker node if use_sensor_faker is true -->
     <node if="$(arg use_sensor_faker)" name="sensor_faker" pkg="gas_sensing" type="sensor_faker" />
 
@@ -19,8 +22,8 @@
     </group>
 
     <!-- Start the path_follower_node -->
-    <include file="$(find path_follower)/launch/path_follower.launch" />
+    <!-- <include file="$(find path_follower)/launch/path_follower.launch" /> -->
 
     <!-- Start the path_hardcoder node -->
-    <node name="path_hardcoder" pkg="path_planner" type="path_hardcoder" />
+    <!-- <node name="path_hardcoder" pkg="path_planner" type="path_hardcoder" output="screen" /> -->
 </launch>

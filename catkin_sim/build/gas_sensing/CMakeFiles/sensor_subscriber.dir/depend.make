@@ -6,6 +6,7 @@ CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o: /home/abersier/Doc
 CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_subscriber.cpp
 CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o: /opt/ros/noetic/include/geometry_msgs/Point.h
 CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose.h
+CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseStamped.h
 CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseWithCovariance.h
 CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o: /opt/ros/noetic/include/geometry_msgs/Quaternion.h

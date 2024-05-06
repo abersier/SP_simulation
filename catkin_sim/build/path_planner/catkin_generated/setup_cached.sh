@@ -8,6 +8,9 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_planner:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_planner/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_planner/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/path_planner'
+export PYTHONPATH="/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_planner/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_planner/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner:$ROS_PACKAGE_PATH"

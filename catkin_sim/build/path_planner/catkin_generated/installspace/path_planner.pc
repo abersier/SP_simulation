@@ -3,6 +3,6 @@ prefix=/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/in
 Name: path_planner
 Description: Description of path_planner
 Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp std_msgs geometry_msgs nav_msgs tf tf2 tf2_ros tf2_geometry_msgs visualization_msgs dynamic_reconfigure
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lpath_planner
+Requires: roscpp std_msgs geometry_msgs message_runtime nav_msgs visualization_msgs dynamic_reconfigure

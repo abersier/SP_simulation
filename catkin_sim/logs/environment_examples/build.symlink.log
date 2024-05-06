@@ -1,4 +1,4 @@
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/environment_examples/lib/pkgconfig/environment_examples.pc, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/pkgconfig/environment_examples.pc)
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/environment_examples/share/environment_examples/models, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/environment_examples/models)
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/environment_examples/share/environment_examples/cmake/environment_examplesConfig.cmake, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/environment_examples/cmake/environment_examplesConfig.cmake)
-Linked: (/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/environment_examples/share/environment_examples/cmake/environment_examplesConfig-version.cmake, /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/environment_examples/cmake/environment_examplesConfig-version.cmake)
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/lib/pkgconfig/environment_examples.pc
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/environment_examples/models
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/environment_examples/cmake/environment_examplesConfig.cmake
+Symlinking /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/share/environment_examples/cmake/environment_examplesConfig-version.cmake

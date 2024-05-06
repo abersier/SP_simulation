@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/anymal_perceptive_ctrl_deep_learning/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_41119/fast && /usr/bin/make -f CMakeFiles/cmTC_41119.dir/build.make CMakeFiles/cmTC_41119.dir/build
+Run Build Command(s):/usr/bin/make cmTC_a5c11/fast && /usr/bin/make -f CMakeFiles/cmTC_a5c11.dir/build.make CMakeFiles/cmTC_a5c11.dir/build
 make[1]: Entering directory '/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/anymal_perceptive_ctrl_deep_learning/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_41119.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_41119.dir/src.c.o   -c /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/anymal_perceptive_ctrl_deep_learning/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_41119
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41119.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_41119.dir/src.c.o  -o cmTC_41119 
-/usr/bin/ld: CMakeFiles/cmTC_41119.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_a5c11.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a5c11.dir/src.c.o   -c /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/anymal_perceptive_ctrl_deep_learning/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a5c11
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5c11.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_a5c11.dir/src.c.o  -o cmTC_a5c11 
+/usr/bin/ld: CMakeFiles/cmTC_a5c11.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_41119.dir/build.make:87: cmTC_41119] Error 1
+make[1]: *** [CMakeFiles/cmTC_a5c11.dir/build.make:87: cmTC_a5c11] Error 1
 make[1]: Leaving directory '/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/anymal_perceptive_ctrl_deep_learning/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_41119/fast] Error 2
+make: *** [Makefile:121: cmTC_a5c11/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/anymal_perceptive_ctrl_deep_learning/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_75e21/fast && /usr/bin/make -f CMakeFiles/cmTC_75e21.dir/build.make CMakeFiles/cmTC_75e21.dir/build
+Run Build Command(s):/usr/bin/make cmTC_96aac/fast && /usr/bin/make -f CMakeFiles/cmTC_96aac.dir/build.make CMakeFiles/cmTC_96aac.dir/build
 make[1]: Entering directory '/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/anymal_perceptive_ctrl_deep_learning/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_75e21.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_75e21.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_75e21
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75e21.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_75e21.dir/CheckFunctionExists.c.o  -o cmTC_75e21  -lpthreads 
+Building C object CMakeFiles/cmTC_96aac.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_96aac.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_96aac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96aac.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_96aac.dir/CheckFunctionExists.c.o  -o cmTC_96aac  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_75e21.dir/build.make:87: cmTC_75e21] Error 1
+make[1]: *** [CMakeFiles/cmTC_96aac.dir/build.make:87: cmTC_96aac] Error 1
 make[1]: Leaving directory '/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/build/anymal_perceptive_ctrl_deep_learning/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_75e21/fast] Error 2
+make: *** [Makefile:121: cmTC_96aac/fast] Error 2
 
 
 

@@ -11,8 +11,8 @@ const _deserializer = _ros_msg_utils.Deserialize;
 const _arrayDeserializer = _deserializer.Array;
 const _finder = _ros_msg_utils.Find;
 const _getByteLength = _ros_msg_utils.getByteLength;
-let geometry_msgs = _finder('geometry_msgs');
 let std_msgs = _finder('std_msgs');
+let geometry_msgs = _finder('geometry_msgs');
 
 //-----------------------------------------------------------
 
@@ -41,7 +41,7 @@ class ConcentrationWithHeader {
         this.pose = initObj.pose
       }
       else {
-        this.pose = new geometry_msgs.msg.Pose();
+        this.pose = new geometry_msgs.msg.PoseStamped();
       }
     }
   }
@@ -53,7 +53,7 @@ class ConcentrationWithHeader {
     // Serialize message field [concentration]
     bufferOffset = _serializer.float32(obj.concentration, buffer, bufferOffset);
     // Serialize message field [pose]
-    bufferOffset = geometry_msgs.msg.Pose.serialize(obj.pose, buffer, bufferOffset);
+    bufferOffset = geometry_msgs.msg.PoseStamped.serialize(obj.pose, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -66,14 +66,15 @@ class ConcentrationWithHeader {
     // Deserialize message field [concentration]
     data.concentration = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [pose]
-    data.pose = geometry_msgs.msg.Pose.deserialize(buffer, bufferOffset);
+    data.pose = geometry_msgs.msg.PoseStamped.deserialize(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
     length += std_msgs.msg.Header.getMessageSize(object.header);
-    return length + 60;
+    length += geometry_msgs.msg.PoseStamped.getMessageSize(object.pose);
+    return length + 4;
   }
 
   static datatype() {
@@ -83,7 +84,7 @@ class ConcentrationWithHeader {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '2da1435b54a9d90dbfea04b09044643e';
+    return '1afbe5b0dba4403221876028b40c67fa';
   }
 
   static messageDefinition() {
@@ -92,7 +93,7 @@ class ConcentrationWithHeader {
     # ConcentrationWithHeader.msg
     std_msgs/Header header
     float32 concentration
-    geometry_msgs/Pose pose
+    geometry_msgs/PoseStamped pose
     
     ================================================================================
     MSG: std_msgs/Header
@@ -109,6 +110,12 @@ class ConcentrationWithHeader {
     time stamp
     #Frame this data is associated with
     string frame_id
+    
+    ================================================================================
+    MSG: geometry_msgs/PoseStamped
+    # A Pose with reference coordinate frame and timestamp
+    Header header
+    Pose pose
     
     ================================================================================
     MSG: geometry_msgs/Pose
@@ -156,10 +163,10 @@ class ConcentrationWithHeader {
     }
 
     if (msg.pose !== undefined) {
-      resolved.pose = geometry_msgs.msg.Pose.Resolve(msg.pose)
+      resolved.pose = geometry_msgs.msg.PoseStamped.Resolve(msg.pose)
     }
     else {
-      resolved.pose = new geometry_msgs.msg.Pose()
+      resolved.pose = new geometry_msgs.msg.PoseStamped()
     }
 
     return resolved;

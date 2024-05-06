@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(path_planner_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_planner/include " STREQUAL " ")
   set(path_planner_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_planner/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -116,7 +116,7 @@ if(NOT " " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "")
+set(libraries "path_planner")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(path_planner_EXPORTED_TARGETS "")
+set(path_planner_EXPORTED_TARGETS "path_planner_generate_messages_cpp;path_planner_generate_messages_eus;path_planner_generate_messages_lisp;path_planner_generate_messages_nodejs;path_planner_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${path_planner_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${path_planner_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp;std_msgs;geometry_msgs;nav_msgs;tf;tf2;tf2_ros;tf2_geometry_msgs;visualization_msgs;dynamic_reconfigure")
+set(depends "roscpp;std_msgs;geometry_msgs;message_runtime;nav_msgs;visualization_msgs;dynamic_reconfigure")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   _list_append_deduplicate(path_planner_EXPORTED_TARGETS ${${path_planner_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "path_planner-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${path_planner_DIR}/${extra})

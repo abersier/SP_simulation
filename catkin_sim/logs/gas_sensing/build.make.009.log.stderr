@@ -1,0 +1,41 @@
+The dependencies of the message/service 'gas_sensing/ConcentrationWithHeader' have changed. Please rerun cmake.
+make[2]: *** [CMakeFiles/_gas_sensing_generate_messages_check_deps_ConcentrationWithHeader.dir/build.make:57: CMakeFiles/_gas_sensing_generate_messages_check_deps_ConcentrationWithHeader] Error 1
+make[1]: *** [CMakeFiles/Makefile2:351: CMakeFiles/_gas_sensing_generate_messages_check_deps_ConcentrationWithHeader.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_faker.cpp:[m[K In member function ‘[01m[Kvoid SensorFaker::callback(const PoseWithCovarianceStampedConstPtr&)[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_faker.cpp:73:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+   73 |         transmitted_gas_concentration.pose.[01;31m[Kpose[m[K.position.x = x;
+      |                                            [01;31m[K^~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_faker.cpp:74:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+   74 |         transmitted_gas_concentration.pose.[01;31m[Kpose[m[K.position.y = y;
+      |                                            [01;31m[K^~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_faker.cpp:75:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+   75 |         transmitted_gas_concentration.pose.[01;31m[Kpose[m[K.position.z = z;
+      |                                            [01;31m[K^~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_faker.cpp:76:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kheader[m[K’
+   76 |         transmitted_gas_concentration.pose.[01;31m[Kheader[m[K.stamp = msg->header.stamp;
+      |                                            [01;31m[K^~~~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_faker.cpp:77:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kheader[m[K’
+   77 |         transmitted_gas_concentration.pose.[01;31m[Kheader[m[K.frame_id = "odom";
+      |                                            [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/sensor_faker.dir/build.make:63: CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:185: CMakeFiles/sensor_faker.dir/all] Error 2
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_subscriber.cpp:[m[K In member function ‘[01m[Kvoid SensorSubscriber::publishConcentrationWithPose()[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_subscriber.cpp:84:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+   84 |             transmitted_gas_concentration.pose.[01;31m[Kpose[m[K.position.x = x;
+      |                                                [01;31m[K^~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_subscriber.cpp:85:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+   85 |             transmitted_gas_concentration.pose.[01;31m[Kpose[m[K.position.y = y;
+      |                                                [01;31m[K^~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_subscriber.cpp:86:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kpose[m[K’
+   86 |             transmitted_gas_concentration.pose.[01;31m[Kpose[m[K.position.z = z;
+      |                                                [01;31m[K^~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_subscriber.cpp:87:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kheader[m[K’
+   87 |             transmitted_gas_concentration.pose.[01;31m[Kheader[m[K.stamp = lastPose->header.stamp;
+      |                                                [01;31m[K^~~~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_subscriber.cpp:88:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgas_sensing::ConcentrationWithHeader_<std::allocator<void> >::_pose_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Pose_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kheader[m[K’
+   88 |             transmitted_gas_concentration.pose.[01;31m[Kheader[m[K.frame_id = "odom";
+      |                                                [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/sensor_subscriber.dir/build.make:63: CMakeFiles/sensor_subscriber.dir/src/sensor_subscriber.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:762: CMakeFiles/sensor_subscriber.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

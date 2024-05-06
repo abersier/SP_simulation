@@ -1,0 +1,21 @@
+State on the 30.03.2024
+
+The code you've written seems to be a good starting point for a path planner that uses a gradient-based approach to navigate towards areas of higher gas concentration. However, there are a few points that might need to be addressed:
+
+The gradient calculation: The gradient is calculated using a central difference approximation. However, this method assumes that the points are evenly spaced, which might not be the case in your scenario. You might need to adjust your gradient calculation to account for this.
+
+The step size: The step size is currently set to a fixed value (0.5). This might not always be the best choice, as it could lead to the robot overshooting areas of high concentration or moving too slowly in areas of low concentration. You might want to consider making the step size adaptive, based on the magnitude of the gradient.
+
+The stopping condition: Currently, the robot stops moving when it reaches a goal point. However, this might not always be the best choice, as the robot could stop in an area of low concentration. You might want to consider adding additional stopping conditions, such as when the concentration is above a certain threshold or when the gradient is below a certain threshold.
+
+The handling of edge cases: You've mentioned that you're not currently concerned with edge cases. However, it's worth noting that there are several potential edge cases that could cause issues, such as when the robot is at the edge of the room or when the concentration measurements are invalid.
+
+The handling of room boundaries: The current code checks if the goal point is outside the room boundaries and reduces the step size if it is. However, this could lead to the robot getting stuck near the boundaries. You might want to consider adding a mechanism to handle this, such as by reflecting the gradient at the boundaries.
+
+The use of random sampling: The first three points are chosen randomly. This might not always be the best choice, as it could lead to the robot initially moving in a suboptimal direction. You might want to consider using a different method to choose the initial points.
+
+The use of a deque to store the measurements: This is a good choice for storing the most recent measurements. However, you might want to consider using a different data structure if you need to access the measurements in a different order.
+
+The use of ROS: The code uses ROS for communication between the different components of the system. This is a good choice for a robotic system, as it allows for easy integration of different sensors and actuators.
+
+In summary, your planner seems to be a good starting point, but there are several aspects that you might want to consider adjusting to improve its performance.

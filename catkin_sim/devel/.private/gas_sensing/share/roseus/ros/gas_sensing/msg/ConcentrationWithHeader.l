@@ -25,7 +25,7 @@
    (&key
     ((:header __header) (instance std_msgs::Header :init))
     ((:concentration __concentration) 0.0)
-    ((:pose __pose) (instance geometry_msgs::Pose :init))
+    ((:pose __pose) (instance geometry_msgs::PoseStamped :init))
     )
    (send-super :init)
    (setq _header __header)
@@ -56,7 +56,7 @@
     (send _header :serialization-length)
     ;; float32 _concentration
     4
-    ;; geometry_msgs/Pose _pose
+    ;; geometry_msgs/PoseStamped _pose
     (send _pose :serialization-length)
     ))
   (:serialize
@@ -67,7 +67,7 @@
        (send _header :serialize s)
      ;; float32 _concentration
        (sys::poke _concentration (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
-     ;; geometry_msgs/Pose _pose
+     ;; geometry_msgs/PoseStamped _pose
        (send _pose :serialize s)
      ;;
      (if (null strm) (get-output-stream-string s))))
@@ -77,19 +77,19 @@
      (send _header :deserialize buf ptr-) (incf ptr- (send _header :serialization-length))
    ;; float32 _concentration
      (setq _concentration (sys::peek buf ptr- :float)) (incf ptr- 4)
-   ;; geometry_msgs/Pose _pose
+   ;; geometry_msgs/PoseStamped _pose
      (send _pose :deserialize buf ptr-) (incf ptr- (send _pose :serialization-length))
    ;;
    self)
   )
 
-(setf (get gas_sensing::ConcentrationWithHeader :md5sum-) "2da1435b54a9d90dbfea04b09044643e")
+(setf (get gas_sensing::ConcentrationWithHeader :md5sum-) "1afbe5b0dba4403221876028b40c67fa")
 (setf (get gas_sensing::ConcentrationWithHeader :datatype-) "gas_sensing/ConcentrationWithHeader")
 (setf (get gas_sensing::ConcentrationWithHeader :definition-)
       "# ConcentrationWithHeader.msg
 std_msgs/Header header
 float32 concentration
-geometry_msgs/Pose pose
+geometry_msgs/PoseStamped pose
 
 ================================================================================
 MSG: std_msgs/Header
@@ -106,6 +106,12 @@ uint32 seq
 time stamp
 #Frame this data is associated with
 string frame_id
+
+================================================================================
+MSG: geometry_msgs/PoseStamped
+# A Pose with reference coordinate frame and timestamp
+Header header
+Pose pose
 
 ================================================================================
 MSG: geometry_msgs/Pose
@@ -133,6 +139,6 @@ float64 w
 
 
 
-(provide :gas_sensing/ConcentrationWithHeader "2da1435b54a9d90dbfea04b09044643e")
+(provide :gas_sensing/ConcentrationWithHeader "1afbe5b0dba4403221876028b40c67fa")
 
 

@@ -7,6 +7,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
+#include <EEPROM.h>
 
 #include <Adafruit_SGP30.h>
 
@@ -34,7 +35,7 @@ std_msgs::Float32MultiArray sensor_data;
 std_msgs::String baseline_msg;
 
 
-ros::Publisher pub("sensor_data", &sensor_data); //Create a publisher object
+ros::Publisher pub("sensor_data", &sensor_data);
 ros::Publisher baseline_pub("baseline_data", &baseline_msg);
 
 
@@ -54,6 +55,8 @@ void setup() {
 
   Wire.begin();
   I2Ccustom.begin(I2C_SDA, I2C_SCL);
+  EEPROM.begin(512);  // Initialize EEPROM with 512 bytes of space
+
 
   // Setup pin 12 as a digital output pin
   pinMode (LED_PIN, OUTPUT);
@@ -63,7 +66,7 @@ void setup() {
   nh.advertise(baseline_pub);
 
   //Initialize data
-  sensor_data.data_length = 2;
+  sensor_data.data_length = 4;
   sensor_data.data = new float[sensor_data.data_length];
 
   // Test the Bosch sensor
@@ -102,8 +105,16 @@ void setup() {
   }
   Serial.println("Found SGP30");
 
-  //If you have a baseline measurement from before you can assign it to start, to 'self-calibrate'
-  //sgp.setIAQBaseline(0x8E68, 0x8F41);  //Will vary for each sensor!
+  // Set the eCO2 and TVOC baselines to a known value
+  uint16_t eCO2_base, TVOC_base;
+  eCO2_base = EEPROM.read(0) << 8 | EEPROM.read(1);  // Load eCO2 baseline from EEPROM
+  TVOC_base = EEPROM.read(2) << 8 | EEPROM.read(3);  // Load TVOC baseline from EEPROM
+
+  if (eCO2_base != 0xFFFF && TVOC_base != 0xFFFF) {  // If the EEPROM contains valid baseline values
+    sgp.setIAQBaseline(eCO2_base, TVOC_base);  // Set the baseline values
+  } else {
+    sgp.setIAQBaseline(0x90c3, 0x9799);  //Will vary for each sensor!
+  }
 
 }
 
@@ -165,10 +176,23 @@ void loop() {
     // Serial.print("****Baseline values: eCO2: 0x"); Serial.print(eCO2_base, HEX);
     // Serial.print(" & TVOC: 0x"); Serial.println(TVOC_base, HEX);
 
-    // Variant using ROS
     String baseline = "****Baseline values: eCO2: 0x" + String(eCO2_base, HEX) + " & TVOC: 0x" + String(TVOC_base, HEX);
     baseline_msg.data = baseline.c_str();
     baseline_pub.publish(&baseline_msg);
+
+    // Read the current baseline values from the EEPROM
+    uint16_t eCO2_base_current = EEPROM.read(0) << 8 | EEPROM.read(1);
+    uint16_t TVOC_base_current = EEPROM.read(2) << 8 | EEPROM.read(3);
+
+    // Compare the new baseline values with the ones in the EEPROM
+    if (eCO2_base != eCO2_base_current || TVOC_base != TVOC_base_current) {
+      // If they are different, write the new baseline values to the EEPROM
+      EEPROM.write(0, eCO2_base >> 8);
+      EEPROM.write(1, eCO2_base & 0xFF);
+      EEPROM.write(2, TVOC_base >> 8);
+      EEPROM.write(3, TVOC_base & 0xFF);
+      EEPROM.commit();
+    }
   }
 
   float time = 0;    
@@ -176,10 +200,11 @@ void loop() {
   time = current_time.sec;
 
   sensor_data.data[0] = TVOC_value;
-  //Might want to consider raw value as well
+  // Might want to consider raw value as well
   sensor_data.data[1] = time;
-  // sensor_data.data[2] = temperature;
-  // sensor_data.data[3] = humidity;
+  sensor_data.data[2] = raw_ethanol;
+  sensor_data.data[3] = raw_bme;
+
   pub.publish(&sensor_data);
 
   //Use of the LED to indicate that the sensor is working
@@ -204,51 +229,3 @@ void loop() {
   nh.spinOnce();
 
 }
-
-
-
-
-
-// // This script is an I2C scanner that will scan the I2C bus for devices
-// void setup() {
-//   Wire.begin();
-
-//   Serial.begin(57600);
-//   while (!Serial);             // Leonardo: wait for serial monitor
-//   Serial.println("\nI2C Scanner");
-// }
-
-// void loop() {
-//   byte error, address;
-//   int nDevices;
-
-//   Serial.println("Scanning...");
-
-//   nDevices = 0;
-//   for(address = 1; address < 127; address++ ) {
-//     Wire.beginTransmission(address);
-//     error = Wire.endTransmission();
-
-//     if (error == 0) {
-//       Serial.print("I2C device found at address 0x");
-//       if (address<16) 
-//         Serial.print("0");
-//       Serial.print(address,HEX);
-//       Serial.println("  !");
-
-//       nDevices++;
-//     }
-//     else if (error==4) {
-//       Serial.print("Unknown error at address 0x");
-//       if (address<16) 
-//         Serial.print("0");
-//       Serial.println(address,HEX);
-//     }    
-//   }
-//   if (nDevices == 0)
-//     Serial.println("No I2C devices found\n");
-//   else
-//     Serial.println("done\n");
-
-//     delay(5000);           // wait 5 seconds for next scan
-// }

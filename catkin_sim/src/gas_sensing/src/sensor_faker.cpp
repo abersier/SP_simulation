@@ -70,9 +70,11 @@ private:
         gas_sensing::ConcentrationWithHeader transmitted_gas_concentration;
 
         // Prepare the message to be sent
-        transmitted_gas_concentration.pose.position.x = x;
-        transmitted_gas_concentration.pose.position.y = y;
-        transmitted_gas_concentration.pose.position.z = z;
+        transmitted_gas_concentration.pose.pose.position.x = x;
+        transmitted_gas_concentration.pose.pose.position.y = y;
+        transmitted_gas_concentration.pose.pose.position.z = z;
+        transmitted_gas_concentration.pose.header.stamp = msg->header.stamp;
+        transmitted_gas_concentration.pose.header.frame_id = "odom";
         
         // Note: this topic will only send the latest concentration, not the history of concentrations. Storing concentrations will be done by the planning node.
         transmitted_gas_concentration.concentration = concentration;

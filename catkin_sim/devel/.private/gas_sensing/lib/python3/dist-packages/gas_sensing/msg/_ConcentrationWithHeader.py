@@ -10,13 +10,13 @@ import geometry_msgs.msg
 import std_msgs.msg
 
 class ConcentrationWithHeader(genpy.Message):
-  _md5sum = "2da1435b54a9d90dbfea04b09044643e"
+  _md5sum = "1afbe5b0dba4403221876028b40c67fa"
   _type = "gas_sensing/ConcentrationWithHeader"
   _has_header = True  # flag to mark the presence of a Header object
   _full_text = """# ConcentrationWithHeader.msg
 std_msgs/Header header
 float32 concentration
-geometry_msgs/Pose pose
+geometry_msgs/PoseStamped pose
 
 ================================================================================
 MSG: std_msgs/Header
@@ -33,6 +33,12 @@ uint32 seq
 time stamp
 #Frame this data is associated with
 string frame_id
+
+================================================================================
+MSG: geometry_msgs/PoseStamped
+# A Pose with reference coordinate frame and timestamp
+Header header
+Pose pose
 
 ================================================================================
 MSG: geometry_msgs/Pose
@@ -57,7 +63,7 @@ float64 z
 float64 w
 """
   __slots__ = ['header','concentration','pose']
-  _slot_types = ['std_msgs/Header','float32','geometry_msgs/Pose']
+  _slot_types = ['std_msgs/Header','float32','geometry_msgs/PoseStamped']
 
   def __init__(self, *args, **kwds):
     """
@@ -81,11 +87,11 @@ float64 w
       if self.concentration is None:
         self.concentration = 0.
       if self.pose is None:
-        self.pose = geometry_msgs.msg.Pose()
+        self.pose = geometry_msgs.msg.PoseStamped()
     else:
       self.header = std_msgs.msg.Header()
       self.concentration = 0.
-      self.pose = geometry_msgs.msg.Pose()
+      self.pose = geometry_msgs.msg.PoseStamped()
 
   def _get_types(self):
     """
@@ -108,7 +114,15 @@ float64 w
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_f7d().pack(_x.concentration, _x.pose.position.x, _x.pose.position.y, _x.pose.position.z, _x.pose.orientation.x, _x.pose.orientation.y, _x.pose.orientation.z, _x.pose.orientation.w))
+      buff.write(_get_struct_f3I().pack(_x.concentration, _x.pose.header.seq, _x.pose.header.stamp.secs, _x.pose.header.stamp.nsecs))
+      _x = self.pose.header.frame_id
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self
+      buff.write(_get_struct_7d().pack(_x.pose.pose.position.x, _x.pose.pose.position.y, _x.pose.pose.position.z, _x.pose.pose.orientation.x, _x.pose.pose.orientation.y, _x.pose.pose.orientation.z, _x.pose.pose.orientation.w))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -123,7 +137,7 @@ float64 w
       if self.header is None:
         self.header = std_msgs.msg.Header()
       if self.pose is None:
-        self.pose = geometry_msgs.msg.Pose()
+        self.pose = geometry_msgs.msg.PoseStamped()
       end = 0
       _x = self
       start = end
@@ -140,8 +154,21 @@ float64 w
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 60
-      (_x.concentration, _x.pose.position.x, _x.pose.position.y, _x.pose.position.z, _x.pose.orientation.x, _x.pose.orientation.y, _x.pose.orientation.z, _x.pose.orientation.w,) = _get_struct_f7d().unpack(str[start:end])
+      end += 16
+      (_x.concentration, _x.pose.header.seq, _x.pose.header.stamp.secs, _x.pose.header.stamp.nsecs,) = _get_struct_f3I().unpack(str[start:end])
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.pose.header.frame_id = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.pose.header.frame_id = str[start:end]
+      _x = self
+      start = end
+      end += 56
+      (_x.pose.pose.position.x, _x.pose.pose.position.y, _x.pose.pose.position.z, _x.pose.pose.orientation.x, _x.pose.pose.orientation.y, _x.pose.pose.orientation.z, _x.pose.pose.orientation.w,) = _get_struct_7d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -163,7 +190,15 @@ float64 w
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_f7d().pack(_x.concentration, _x.pose.position.x, _x.pose.position.y, _x.pose.position.z, _x.pose.orientation.x, _x.pose.orientation.y, _x.pose.orientation.z, _x.pose.orientation.w))
+      buff.write(_get_struct_f3I().pack(_x.concentration, _x.pose.header.seq, _x.pose.header.stamp.secs, _x.pose.header.stamp.nsecs))
+      _x = self.pose.header.frame_id
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self
+      buff.write(_get_struct_7d().pack(_x.pose.pose.position.x, _x.pose.pose.position.y, _x.pose.pose.position.z, _x.pose.pose.orientation.x, _x.pose.pose.orientation.y, _x.pose.pose.orientation.z, _x.pose.pose.orientation.w))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -179,7 +214,7 @@ float64 w
       if self.header is None:
         self.header = std_msgs.msg.Header()
       if self.pose is None:
-        self.pose = geometry_msgs.msg.Pose()
+        self.pose = geometry_msgs.msg.PoseStamped()
       end = 0
       _x = self
       start = end
@@ -196,8 +231,21 @@ float64 w
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 60
-      (_x.concentration, _x.pose.position.x, _x.pose.position.y, _x.pose.position.z, _x.pose.orientation.x, _x.pose.orientation.y, _x.pose.orientation.z, _x.pose.orientation.w,) = _get_struct_f7d().unpack(str[start:end])
+      end += 16
+      (_x.concentration, _x.pose.header.seq, _x.pose.header.stamp.secs, _x.pose.header.stamp.nsecs,) = _get_struct_f3I().unpack(str[start:end])
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.pose.header.frame_id = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.pose.header.frame_id = str[start:end]
+      _x = self
+      start = end
+      end += 56
+      (_x.pose.pose.position.x, _x.pose.pose.position.y, _x.pose.pose.position.z, _x.pose.pose.orientation.x, _x.pose.pose.orientation.y, _x.pose.pose.orientation.z, _x.pose.pose.orientation.w,) = _get_struct_7d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -212,9 +260,15 @@ def _get_struct_3I():
     if _struct_3I is None:
         _struct_3I = struct.Struct("<3I")
     return _struct_3I
-_struct_f7d = None
-def _get_struct_f7d():
-    global _struct_f7d
-    if _struct_f7d is None:
-        _struct_f7d = struct.Struct("<f7d")
-    return _struct_f7d
+_struct_7d = None
+def _get_struct_7d():
+    global _struct_7d
+    if _struct_7d is None:
+        _struct_7d = struct.Struct("<7d")
+    return _struct_7d
+_struct_f3I = None
+def _get_struct_f3I():
+    global _struct_f3I
+    if _struct_f3I is None:
+        _struct_f3I = struct.Struct("<f3I")
+    return _struct_f3I

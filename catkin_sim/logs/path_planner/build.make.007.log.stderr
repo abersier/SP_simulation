@@ -1,0 +1,24 @@
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:[m[K In member function ‘[01m[Kvoid PathPlanner::callback(const ConcentrationWithHeaderConstPtr&)[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:105:13:[m[K [01;31m[Kerror: [m[K‘[01m[KROSINFO[m[K’ was not declared in this scope; did you mean ‘[01m[KROS_INFO[m[K’?
+  105 |             [01;31m[KROSINFO[m[K("one");
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[KROS_INFO[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:109:13:[m[K [01;31m[Kerror: [m[K‘[01m[KROSINFO[m[K’ was not declared in this scope; did you mean ‘[01m[KROS_INFO[m[K’?
+  109 |             [01;31m[KROSINFO[m[K("two");
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[KROS_INFO[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:113:13:[m[K [01;31m[Kerror: [m[K‘[01m[KROSINFO[m[K’ was not declared in this scope; did you mean ‘[01m[KROS_INFO[m[K’?
+  113 |             [01;31m[KROSINFO[m[K("three");
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[KROS_INFO[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:137:13:[m[K [01;31m[Kerror: [m[K‘[01m[KROSINFO[m[K’ was not declared in this scope; did you mean ‘[01m[KROS_INFO[m[K’?
+  137 |             [01;31m[KROSINFO[m[K("four");
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[KROS_INFO[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_planner.cpp:162:13:[m[K [01;31m[Kerror: [m[K‘[01m[KROSINFO[m[K’ was not declared in this scope; did you mean ‘[01m[KROS_INFO[m[K’?
+  162 |             [01;31m[KROSINFO[m[K("five");
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[KROS_INFO[m[K
+make[2]: *** [CMakeFiles/path_planner.dir/build.make:63: CMakeFiles/path_planner.dir/src/path_planner.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:196: CMakeFiles/path_planner.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

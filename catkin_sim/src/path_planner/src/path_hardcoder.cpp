@@ -103,40 +103,40 @@ int main(int argc, char **argv)
 
     //     step_points[i].pose.orientation.w = 1.0;
 
-        // Robot simulates walk towards the source
-        // Room dimensions
-        double room_length = 12.0; // rounded from 12.9
-        double room_width = 6.0; // rounded from 6.4
+    // Robot simulates walk towards the source
+    // Room dimensions
+    double room_length = 12.0; // rounded from 12.9
+    double room_width = 6.0; // rounded from 6.4
 
-        // Location of the source
-        double source_x = 5.5;
-        double source_y = 2.5;
+    // Location of the source
+    double source_x = 5.5;
+    double source_y = 2.5;
 
-        // Starting point of the robot
-        double start_x = 0.0;
-        double start_y = 0.0;
+    // Starting point of the robot
+    double start_x = 0.0;
+    double start_y = 0.0;
 
-        // Number of step-points
-        int num_points = 100;
+    // Number of step-points
+    int num_points = 100;
 
-        // Array of hardcoded step-points
-        geometry_msgs::PoseStamped step_points[num_points];
+    // Array of hardcoded step-points
+    geometry_msgs::PoseStamped step_points[num_points];
 
-        // Initialize the step-points following the path with small deviations and corrections
-        for (int i = 0; i < num_points; ++i) {
-            step_points[i].header.stamp = ros::Time::now();
-            step_points[i].header.frame_id = "odom";
+    // Initialize the step-points following the path with small deviations and corrections
+    for (int i = 0; i < num_points; ++i) {
+        step_points[i].header.stamp = ros::Time::now();
+        step_points[i].header.frame_id = "odom";
 
-            // Linear interpolation between the start and end points
-            double t = (double)i / (num_points - 1);
-            step_points[i].pose.position.x = (1 - t) * start_x + t * source_x;
-            step_points[i].pose.position.y = (1 - t) * start_y + t * source_y;
+        // Linear interpolation between the start and end points
+        double t = (double)i / (num_points - 1);
+        step_points[i].pose.position.x = (1 - t) * start_x + t * source_x;
+        step_points[i].pose.position.y = (1 - t) * start_y + t * source_y;
 
-            // Add some random noise to simulate small deviations and corrections
-            step_points[i].pose.position.x += ((double) rand() / (RAND_MAX)) * 0.7 - 0.35;
-            step_points[i].pose.position.y += ((double) rand() / (RAND_MAX)) * 0.7 - 0.35;
+        // Add some random noise to simulate small deviations and corrections
+        step_points[i].pose.position.x += ((double) rand() / (RAND_MAX)) * 0.7 - 0.35;
+        step_points[i].pose.position.y += ((double) rand() / (RAND_MAX)) * 0.7 - 0.35;
 
-            step_points[i].pose.orientation.w = 1.0;
+        step_points[i].pose.orientation.w = 1.0;
     }
 
     // Create a Path message
@@ -144,10 +144,12 @@ int main(int argc, char **argv)
     path.header.stamp = ros::Time::now();
     path.header.frame_id = "odom"; 
 
-    // Add the step-points to the Path message
-    for (int i = 0; i < num_points; ++i) {
-        path.poses.push_back(step_points[i]);
-    }
+    // // Add the step-points to the Path message
+    // for (int i = 0; i < num_points; ++i) {
+    //     path.poses.push_back(step_points[i]);
+    // }
+    path.poses.push_back(step_points[0]);
+    path.poses.push_back(step_points[99]);
 
     // Publish the Path message
     path_hardcoder.publish(path);

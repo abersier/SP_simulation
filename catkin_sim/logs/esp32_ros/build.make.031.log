@@ -1,0 +1,16 @@
+[35m[1mScanning dependencies of target sensor_listener[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_py
+[ 11%] [32mBuilding CXX object CMakeFiles/sensor_listener.dir/src/sensor_listener.cpp.o[0m
+[ 11%] Built target _esp32_ros_generate_messages_check_deps_FloatWithHeader
+[ 33%] Built target esp32_ros_generate_messages_eus
+[ 44%] Built target esp32_ros_generate_messages_cpp
+[ 55%] Built target esp32_ros_generate_messages_lisp
+[ 77%] Built target esp32_ros_generate_messages_py
+[ 88%] Built target esp32_ros_generate_messages_nodejs
+[ 88%] Built target esp32_ros_generate_messages
+[100%] [32m[1mLinking CXX executable /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/esp32_ros/lib/esp32_ros/sensor_listener[0m
+[100%] Built target sensor_listener

@@ -1,0 +1,10 @@
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_follower/src/pathFollower.cpp:107:1:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[KmmandTopic[m[K’
+  107 | [01;31m[KmmandTopic[m[K = "/path_planning_and_following/twist"; //default: /cmd_vel
+      | [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_follower/src/pathFollower.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_follower/src/pathFollower.cpp:248:38:[m[K [01;31m[Kerror: [m[K‘[01m[KcommandTopic[m[K’ was not declared in this scope
+  248 |   nhPrivate.getParam("commandTopic", [01;31m[KcommandTopic[m[K);
+      |                                      [01;31m[K^~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/path_follower_node.dir/build.make:63: CMakeFiles/path_follower_node.dir/src/pathFollower.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:218: CMakeFiles/path_follower_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

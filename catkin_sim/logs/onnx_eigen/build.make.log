@@ -1,1 +1,5 @@
+[35m[1mScanning dependencies of target onnx_eigen[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/onnx_eigen.dir/src/OnnxEigen.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/onnx_eigen.dir/src/OnnxEigenRNN.cpp.o[0m
+[100%] [32m[1mLinking CXX static library libonnx_eigen.a[0m
 [100%] Built target onnx_eigen
