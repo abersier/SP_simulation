@@ -3,6 +3,7 @@
 // When running rosinfo, use "rosinfo pathFollower"
 
 // This is a slightly modified version of the original code. The original code was written by Yida Zhang.
+
 #include <math.h>
 #include <time.h>
 #include <stdio.h>
@@ -129,34 +130,38 @@ void odomHandler(const geometry_msgs::PoseWithCovarianceStampedConstPtr& odomIn)
   }
 }
 
-void odomHandler(const nav_msgs::OdometryConstPtr& odomIn)
-{
-  odomTime = odomIn->header.stamp.toSec();
+// void odomHandler(const nav_msgs::OdometryConstPtr& odomIn)
+// {
+//   odomTime = odomIn->header.stamp.toSec();
 
-  double roll, pitch, yaw;
-  geometry_msgs::Quaternion geoQuat = odomIn->pose.pose.orientation;
-  tf::Matrix3x3(tf::Quaternion(geoQuat.x, geoQuat.y, geoQuat.z, geoQuat.w)).getRPY(roll, pitch, yaw);
+//   double roll, pitch, yaw;
+//   geometry_msgs::Quaternion geoQuat = odomIn->pose.pose.orientation;
+//   tf::Matrix3x3(tf::Quaternion(geoQuat.x, geoQuat.y, geoQuat.z, geoQuat.w)).getRPY(roll, pitch, yaw);
 
-  vehicleRoll = roll;
-  vehiclePitch = pitch;
-  vehicleYaw = yaw;
-  vehicleX = odomIn->pose.pose.position.x;
-  vehicleY = odomIn->pose.pose.position.y;
-  vehicleZ = odomIn->pose.pose.position.z;
+//   vehicleRoll = roll;
+//   vehiclePitch = pitch;
+//   vehicleYaw = yaw;
+//   vehicleX = odomIn->pose.pose.position.x;
+//   vehicleY = odomIn->pose.pose.position.y;
+//   vehicleZ = odomIn->pose.pose.position.z;
 
-  if ((fabs(roll) > inclThre * PI / 180.0 || fabs(pitch) > inclThre * PI / 180.0) && useInclToStop) {
-    stopInitTime = odomIn->header.stamp.toSec();
-  }
-}
+//   if ((fabs(roll) > inclThre * PI / 180.0 || fabs(pitch) > inclThre * PI / 180.0) && useInclToStop) {
+//     stopInitTime = odomIn->header.stamp.toSec();
+//   }
+// }
 
+// The path passed to this function should be given in the /base frame
 void pathHandler(const nav_msgs::Path::ConstPtr& pathIn)
 {
   int pathSize = pathIn->poses.size();
   path.poses.resize(pathSize);
+  path.header.frame_id = pathIn->header.frame_id;
+
   for (int i = 0; i < pathSize; i++) {
     path.poses[i].pose.position.x = pathIn->poses[i].pose.position.x;
     path.poses[i].pose.position.y = pathIn->poses[i].pose.position.y;
     path.poses[i].pose.position.z = pathIn->poses[i].pose.position.z;
+    path.poses[i].header.frame_id = pathIn->poses[i].header.frame_id;
   }
 
   vehicleXRec = vehicleX;
@@ -287,11 +292,23 @@ int main(int argc, char** argv)
     ros::spinOnce();
 
     if (pathInit) {
-      // HERE, ADDED COMMENTARS FOR DEBUGGUNG
-      ROS_INFO("Path initialized: ");
-      for(int i = 0; i < path.poses.size(); i++) {
-        ROS_INFO("Pose %d: x: %f, y: %f", i, path.poses[i].pose.position.x, path.poses[i].pose.position.y);
-      }
+
+    //   // HERE, ADDED COMMENTARS FOR DEBUGGUNG
+    //   ROS_INFO("Path initialized: ");
+    //   for(int i = 0; i < path.poses.size(); i++) {
+    //     ROS_INFO("Pose %d: x: %f, y: %f", i, path.poses[i].pose.position.x, path.poses[i].pose.position.y);
+    //     if (path.poses[i].header.frame_id.empty()) {
+    //         ROS_INFO("Frame ID for pose %d is empty", i);
+    //     } else {
+    //         ROS_INFO("Frame ID for pose %d: %s", i, path.poses[i].header.frame_id.c_str());
+    // }
+    //   }
+    //   if (path.header.frame_id.empty()) {
+    //       ROS_INFO("Frame ID is empty");
+    //   } else {
+    //       ROS_INFO("Frame ID: %s", path.header.frame_id.c_str());
+    //   }
+
       float vehicleXRel = cos(vehicleYawRec) * (vehicleX - vehicleXRec)
                         + sin(vehicleYawRec) * (vehicleY - vehicleYRec);
       float vehicleYRel = -sin(vehicleYawRec) * (vehicleX - vehicleXRec)

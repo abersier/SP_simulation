@@ -15,6 +15,9 @@ find_package(catkin REQUIRED COMPONENTS
   nav_msgs
   visualization_msgs
   dynamic_reconfigure
+  std_srvs
+  tf2_ros
+  tf2_geometry_msgs
   # gas_sensing
 )
 
@@ -111,7 +114,7 @@ catkin_package(
 # INCLUDE_DIRS include
 #  LIBRARIES path_planner
 LIBRARIES ${PROJECT_NAME}
-CATKIN_DEPENDS roscpp std_msgs geometry_msgs message_runtime nav_msgs visualization_msgs dynamic_reconfigure 
+CATKIN_DEPENDS roscpp std_msgs geometry_msgs message_runtime nav_msgs visualization_msgs dynamic_reconfigure std_srvs tf2_ros tf2_geometry_msgs
 #  DEPENDS system_lib
 )
 

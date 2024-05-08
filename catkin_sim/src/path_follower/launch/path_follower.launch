@@ -2,7 +2,7 @@
 
   <arg name="odomTopic" default="/state_estimator/pose_in_odom"/>
   <arg name="commandTopic" default="/path_planning_and_following/twist"/>
-  <arg name="baseFrame" default="base"/>
+  <arg name="baseFrame" default="base"/> <!--default was base-->
 
   <arg name="trackingDis" default="0.25"/>
   <arg name="sensorOffsetX" default="0.4"/>
@@ -13,7 +13,7 @@
   <arg name="autonomyMode" default="true"/>
   <arg name="autonomySpeed" default="1.5"/>
   <arg name="joyToSpeedDelay" default="2.0"/>
-  <arg name="baseInverted" default="false"/>
+  <arg name="baseInverted" default="false"/> <!--default was false-->
 
   <node pkg="path_follower" type="path_follower_node" name="pathFollower" output="screen" required="true">
     <param name="sensorOffsetX" value="$(arg sensorOffsetX)" />

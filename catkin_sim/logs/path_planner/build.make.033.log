@@ -1,0 +1,51 @@
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[ 18%] Built target path_planner
+[35m[1mScanning dependencies of target path_hardcoder[0m
+[ 18%] Built target geometry_msgs_generate_messages_cpp
+[ 18%] Built target geometry_msgs_generate_messages_lisp
+[ 18%] Built target std_msgs_generate_messages_lisp
+[ 18%] Built target std_msgs_generate_messages_cpp
+[ 27%] [32mBuilding CXX object CMakeFiles/path_hardcoder.dir/src/path_hardcoder.cpp.o[0m
+[ 27%] Built target _path_planner_generate_messages_check_deps_ConcentrationWithHeader
+[ 45%] Built target path_planner_generate_messages_eus
+[ 63%] Built target path_planner_generate_messages_nodejs
+[ 72%] Built target path_planner_generate_messages_py
+[ 81%] Built target path_planner_generate_messages_cpp
+[ 90%] Built target path_planner_generate_messages_lisp
+[ 90%] Built target path_planner_generate_messages
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:[m[K In member function ‘[01m[Kbool PathHardcoder::sendPathCallback(std_srvs::Empty::Request&, std_srvs::Empty::Response&)[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:73:126:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Ktf2_ros::Buffer::lookupTransform(const char [5], ros::Time, ros::Duration)[m[K’
+   73 |                 geometry_msgs::TransformStamped transform = tfBuffer.lookupTransform("base", ros::Time(0), ros::Duration(1.0)[01;31m[K)[m[K;
+      |                                                                                                                              [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/tf2_ros/transform_listener.h:40[m[K,
+                 from [01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:6[m[K:
+[01m[K/opt/ros/noetic/include/tf2_ros/buffer.h:76:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual geometry_msgs::TransformStamped tf2_ros::Buffer::lookupTransform(const string&, const string&, const ros::Time&, ros::Duration) const[m[K’
+   76 |     [01;36m[KlookupTransform[m[K(const std::string& target_frame, const std::string& source_frame,
+      |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/tf2_ros/buffer.h:76:5:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/opt/ros/noetic/include/tf2_ros/buffer.h:92:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual geometry_msgs::TransformStamped tf2_ros::Buffer::lookupTransform(const string&, const ros::Time&, const string&, const ros::Time&, const string&, ros::Duration) const[m[K’
+   92 |     [01;36m[KlookupTransform[m[K(const std::string& target_frame, const ros::Time& target_time,
+      |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/tf2_ros/buffer.h:92:5:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 3 provided
+In file included from [01m[K/opt/ros/noetic/include/tf2_ros/buffer_interface.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/tf2_ros/buffer.h:35[m[K,
+                 from [01m[K/opt/ros/noetic/include/tf2_ros/transform_listener.h:40[m[K,
+                 from [01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:6[m[K:
+[01m[K/opt/ros/noetic/include/tf2/buffer_core.h:142:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::TransformStamped tf2::BufferCore::lookupTransform(const string&, const ros::Time&, const string&, const ros::Time&, const string&) const[m[K’
+  142 |     [01;36m[KlookupTransform[m[K(const std::string& target_frame, const ros::Time& target_time,
+      |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/tf2/buffer_core.h:142:5:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 3 provided
+[01m[K/opt/ros/noetic/include/tf2/buffer_core.h:126:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::TransformStamped tf2::BufferCore::lookupTransform(const string&, const string&, const ros::Time&) const[m[K’
+  126 |     [01;36m[KlookupTransform[m[K(const std::string& target_frame, const std::string& source_frame,
+      |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/tf2/buffer_core.h:126:73:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kros::Time[m[K’ to ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  126 |     lookupTransform(const std::string& target_frame, [01;36m[Kconst std::string& source_frame[m[K,
+      |                                                      [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/path_hardcoder.dir/build.make:63: CMakeFiles/path_hardcoder.dir/src/path_hardcoder.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:790: CMakeFiles/path_hardcoder.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

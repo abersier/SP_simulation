@@ -1,9 +1,10 @@
 #include "ros/ros.h"
 #include "geometry_msgs/PoseStamped.h"
 #include "nav_msgs/Path.h"
-// #include "gas_sensing/ConcentrationWithHeader.h"
 #include "path_planner/ConcentrationWithHeader.h"
-
+#include <tf2_ros/transform_listener.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include "std_srvs/Empty.h"
 #include <deque>
 #include <cmath>
 
@@ -13,12 +14,35 @@
 // 3. I need to modify my launch file to include the new node path_planner.cpp and verify its correctness (done)
 // 4. I need to modify my CMakeLists.txt and my package.xml to include #include <deque> and #include <cmath>
 
+void PathPlanner::publishTransformedPath(const nav_msgs::Path& path)
+{
+    // Transform the path from "odom" to "base"
+    nav_msgs::Path transformed_path;
+    int pathSize = path.poses.size();
+    for (int i = 0; i < pathSize; ++i) {
+        geometry_msgs::PoseStamped pose = path.poses[i];
+        geometry_msgs::TransformStamped transform;
+        try {
+            transform = tfBuffer.lookupTransform("base", "odom", ros::Time(0));
+        } catch (tf2::TransformException &ex) {
+            ROS_WARN("%s", ex.what());
+            ros::Duration(1.0).sleep();
+            continue;
+        }
+        geometry_msgs::PoseStamped transformed_pose;
+        tf2::doTransform(pose, transformed_pose, transform);
+        transformed_path.poses.push_back(transformed_pose);
+    }
+    transformed_path.header.stamp = ros::Time::now();
+    transformed_path.header.frame_id = "base";
+    pub.publish(transformed_path);
+}
 
 
-double computeDistance(const geometry_msgs::PoseStamped& pose1, const geometry_msgs::PoseStamped& pose2) {
+double PathPlanner::computeDistance(const geometry_msgs::PoseStamped& pose1, const geometry_msgs::PoseStamped& pose2)
+{
     double dx = pose1.pose.position.x - pose2.pose.position.x;
     double dy = pose1.pose.position.y - pose2.pose.position.y;
-    // double dz = pose1.pose.position.z - pose2.pose.position.z;
 
     return std::sqrt(dx * dx + dy * dy);
 }
@@ -32,7 +56,7 @@ double computeDistance(const geometry_msgs::PoseStamped& pose1, const geometry_m
 class PathPlanner
 {
 public:
-    PathPlanner()
+    PathPlanner() : tfListener(tfBuffer)
     {
         // Initialize moving_to_goal to false
         moving_to_goal = false;
@@ -47,10 +71,10 @@ public:
         pub = nh.advertise<nav_msgs::Path>("gradient_path", 1000);
     }
 
-    void publish(const nav_msgs::Path& path)
-    {
-        pub.publish(path);
-    }
+    void publishTransformedPath(const nav_msgs::Path& path);
+
+
+    double computeDistance(const geometry_msgs::PoseStamped& pose1, const geometry_msgs::PoseStamped& pose2);
 
     // // The first 3 measurements, as the gradient cannot be calculated yet, are obtained randomly
     // // The path should be planned in a way that the robot moves towards the area with the highest concentration
@@ -68,6 +92,10 @@ public:
     // // A variant could be to keep walking in that direction, as long as the concentration increases
 
 private:
+
+    tf2_ros::Buffer tfBuffer;
+    tf2_ros::TransformListener tfListener;
+
     // Initialize the arrays to store the information used in the callback function
     std::deque<ros::Time> timeDeque;
     std::deque<geometry_msgs::PoseStamped> positionDeque;

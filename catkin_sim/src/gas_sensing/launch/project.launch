@@ -25,5 +25,5 @@
     <!-- <include file="$(find path_follower)/launch/path_follower.launch" /> -->
 
     <!-- Start the path_hardcoder node -->
-    <!-- <node name="path_hardcoder" pkg="path_planner" type="path_hardcoder" output="screen" /> -->
+    <node name="path_hardcoder" pkg="path_planner" type="path_hardcoder" output="screen" />
 </launch>

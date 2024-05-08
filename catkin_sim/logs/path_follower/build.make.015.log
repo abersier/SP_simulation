@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target path_follower_node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/path_follower_node.dir/src/pathFollower.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/devel/.private/path_follower/lib/path_follower/path_follower_node[0m
-[100%] Built target path_follower_node

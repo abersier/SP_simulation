@@ -1,0 +1,15 @@
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:[m[K In constructor ‘[01m[KPathHardcoder::PathHardcoder()[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:13:23:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KPathHardcoder[m[K’ does not have any field named ‘[01m[KtfListener[m[K’
+   13 |     PathHardcoder() : [01;31m[KtfListener[m[K(tfBuffer)
+      |                       [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:13:34:[m[K [01;31m[Kerror: [m[K‘[01m[KtfBuffer[m[K’ was not declared in this scope
+   13 |     PathHardcoder() : tfListener([01;31m[KtfBuffer[m[K)
+      |                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:[m[K In member function ‘[01m[Kbool PathHardcoder::sendPathCallback(std_srvs::Empty::Request&, std_srvs::Empty::Response&)[m[K’:
+[01m[K/home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/path_planner/src/path_hardcoder.cpp:68:61:[m[K [01;31m[Kerror: [m[K‘[01m[KtfBuffer[m[K’ was not declared in this scope
+   68 |                 geometry_msgs::TransformStamped transform = [01;31m[KtfBuffer[m[K.lookupTransform("base_link", ros::Time(0), ros::Duration(1.0));
+      |                                                             [01;31m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/path_hardcoder.dir/build.make:63: CMakeFiles/path_hardcoder.dir/src/path_hardcoder.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:790: CMakeFiles/path_hardcoder.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

@@ -5,6 +5,7 @@ CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o: /home/abersier/Documents/ETH
 CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o: /home/abersier/Documents/ETH/Semester_Project/SP_simulation/catkin_sim/src/gas_sensing/src/sensor_faker.cpp
 CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o: /opt/ros/noetic/include/geometry_msgs/Point.h
 CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose.h
+CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseStamped.h
 CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseWithCovariance.h
 CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/sensor_faker.dir/src/sensor_faker.cpp.o: /opt/ros/noetic/include/geometry_msgs/Quaternion.h
